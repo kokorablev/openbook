@@ -1,10 +1,11 @@
 /* Whole document: */
 @font-face {
-  font-family: 'Panton';
-  src: url('fonts/Panton-Regular.woff2') format('woff2'),
-       url('fonts/Panton-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Panton';
+    src: url('Panton-Regular.woff2') format('woff2'),
+         url('Panton-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 body, .book, .book .book-summary, .book .book-body {
