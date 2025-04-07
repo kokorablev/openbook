@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Цифровой двойник города</title>
+  <meta name="description" content="Опыт создания цифровых двойников города для систем поддержки принятия решений. Первый шаг к искуственному интеллекту." />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Цифровой двойник города" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Опыт создания цифровых двойников города для систем поддержки принятия решений. Первый шаг к искуственному интеллекту." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Цифровой двойник города" />
+  
+  <meta name="twitter:description" content="Опыт создания цифровых двойников города для систем поддержки принятия решений. Первый шаг к искуственному интеллекту." />
+  
+
+
+
+<meta name="date" content="2024-02-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="intro.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.1/htmlwidgets.js"></script>
+<link href="libs/vis-9.1.0/vis-network.min.css" rel="stylesheet" />
+<script src="libs/vis-9.1.0/vis-network.min.js"></script>
+<script src="libs/visNetwork-binding-2.1.2/visNetwork.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+<script src="libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Открытая книга ЦД</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#ReferenceList"><i class="fa fa-check"></i><b>1.1</b> Проекты компании</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#Competence"><i class="fa fa-check"></i><b>1.2</b> Компетенции</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#Prototypes"><i class="fa fa-check"></i><b>1.3</b> Прототипы решений</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#он-лайн-платформы-оказания-услуг"><i class="fa fa-check"></i><b>1.4</b> Он-лайн платформы оказания услуг</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#MathModels"><i class="fa fa-check"></i><b>1.5</b> Разрабатываемые модели</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#макроэкономические-модели"><i class="fa fa-check"></i><b>1.5.1</b> Макроэкономические модели</a></li>
+<li class="chapter" data-level="1.5.2" data-path="index.html"><a href="index.html#межотраслевые-и-отраслевые-модели"><i class="fa fa-check"></i><b>1.5.2</b> Межотраслевые и отраслевые модели</a></li>
+<li class="chapter" data-level="1.5.3" data-path="index.html"><a href="index.html#технологические-и-технические-модели"><i class="fa fa-check"></i><b>1.5.3</b> Технологические и технические модели</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Вступление</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#авторский-коллектив"><i class="fa fa-check"></i><b>2.1</b> Авторский коллектив</a></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#печатные-публикации"><i class="fa fa-check"></i><b>2.2</b> Печатные публикации</a></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#видеоматериалы"><i class="fa fa-check"></i><b>2.3</b> Видеоматериалы</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="intro.html"><a href="intro.html#записки-прикладного-математика"><i class="fa fa-check"></i><b>2.3.1</b> Записки прикладного математика</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="concept.html"><a href="concept.html"><i class="fa fa-check"></i><b>3</b> Основные понятия</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="concept.html"><a href="concept.html#сокращения"><i class="fa fa-check"></i><b>3.1</b> Сокращения</a></li>
+<li class="chapter" data-level="3.2" data-path="concept.html"><a href="concept.html#проблемы-развития-территорий"><i class="fa fa-check"></i><b>3.2</b> Проблемы развития территорий</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="concept.html"><a href="concept.html#контекст"><i class="fa fa-check"></i><b>3.2.1</b> Контекст</a></li>
+<li class="chapter" data-level="3.2.2" data-path="concept.html"><a href="concept.html#проблемы"><i class="fa fa-check"></i><b>3.2.2</b> Проблемы</a></li>
+<li class="chapter" data-level="3.2.3" data-path="concept.html"><a href="concept.html#ключевая-причина"><i class="fa fa-check"></i><b>3.2.3</b> Ключевая причина</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="concept.html"><a href="concept.html#цели-и-задачи-цд"><i class="fa fa-check"></i><b>3.3</b> Цели и задачи ЦД</a></li>
+<li class="chapter" data-level="3.4" data-path="concept.html"><a href="concept.html#моделеоринтированная-система-управления"><i class="fa fa-check"></i><b>3.4</b> Моделеоринтированная система управления</a></li>
+<li class="chapter" data-level="3.5" data-path="concept.html"><a href="concept.html#опыт-городов-по-построению-цифровых-двойников"><i class="fa fa-check"></i><b>3.5</b> Опыт городов по построению Цифровых Двойников</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="concept.html"><a href="concept.html#межотраслевой-баланс-санкт-петербурга"><i class="fa fa-check"></i><b>3.5.1</b> Межотраслевой баланс Санкт-Петербурга</a></li>
+<li class="chapter" data-level="3.5.2" data-path="concept.html"><a href="concept.html#симулятор-большого-лондона-london-simulator"><i class="fa fa-check"></i><b>3.5.2</b> Симулятор Большого Лондона (London Simulator)</a></li>
+<li class="chapter" data-level="3.5.3" data-path="concept.html"><a href="concept.html#модель-магистральных-трубопроводов"><i class="fa fa-check"></i><b>3.5.3</b> Модель магистральных трубопроводов</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="CityDataHub.html"><a href="CityDataHub.html"><i class="fa fa-check"></i><b>4</b> Банк данных Цифрового Двойника</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="CityDataHub.html"><a href="CityDataHub.html#назначение"><i class="fa fa-check"></i><b>4.1</b> Назначение</a></li>
+<li class="chapter" data-level="4.2" data-path="CityDataHub.html"><a href="CityDataHub.html#описание-банка-данных"><i class="fa fa-check"></i><b>4.2</b> Описание банка данных</a></li>
+<li class="chapter" data-level="4.3" data-path="CityDataHub.html"><a href="CityDataHub.html#состав-наборов-данных"><i class="fa fa-check"></i><b>4.3</b> Состав наборов данных</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="CityDataHub.html"><a href="CityDataHub.html#модель-данных"><i class="fa fa-check"></i><b>4.3.1</b> Модель данных</a></li>
+<li class="chapter" data-level="4.3.2" data-path="CityDataHub.html"><a href="CityDataHub.html#MasterData"><i class="fa fa-check"></i><b>4.3.2</b> Справочные данные</a></li>
+<li class="chapter" data-level="4.3.3" data-path="CityDataHub.html"><a href="CityDataHub.html#базовые-показатели-сэр"><i class="fa fa-check"></i><b>4.3.3</b> Базовые показатели СЭР</a></li>
+<li class="chapter" data-level="4.3.4" data-path="CityDataHub.html"><a href="CityDataHub.html#матрицы-социально-экономических-связей"><i class="fa fa-check"></i><b>4.3.4</b> Матрицы социально-экономических связей</a></li>
+<li class="chapter" data-level="4.3.5" data-path="CityDataHub.html"><a href="CityDataHub.html#банк-управленческих-решений"><i class="fa fa-check"></i><b>4.3.5</b> Банк управленческих решений</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="CityDataHub.html"><a href="CityDataHub.html#услуга-по-подписке-на-наборы-данных"><i class="fa fa-check"></i><b>4.4</b> Услуга по подписке на наборы данных</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="targets.html"><a href="targets.html"><i class="fa fa-check"></i><b>5</b> Конвеер обработки</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="targets.html"><a href="targets.html#назначение-1"><i class="fa fa-check"></i><b>5.1</b> Назначение</a></li>
+<li class="chapter" data-level="5.2" data-path="targets.html"><a href="targets.html#базовая-технология"><i class="fa fa-check"></i><b>5.2</b> Базовая технология</a></li>
+<li class="chapter" data-level="5.3" data-path="targets.html"><a href="targets.html#задачи-конвеера"><i class="fa fa-check"></i><b>5.3</b> Задачи конвеера</a></li>
+<li class="chapter" data-level="5.4" data-path="targets.html"><a href="targets.html#состояние-конвеера"><i class="fa fa-check"></i><b>5.4</b> Состояние конвеера</a></li>
+<li class="chapter" data-level="5.5" data-path="targets.html"><a href="targets.html#предметный-состав-конвеера"><i class="fa fa-check"></i><b>5.5</b> Предметный состав конвеера</a></li>
+<li class="chapter" data-level="5.6" data-path="targets.html"><a href="targets.html#технические-блоки-конвеера"><i class="fa fa-check"></i><b>5.6</b> Технические блоки конвеера</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="targets.html"><a href="targets.html#блок-сбора-данных"><i class="fa fa-check"></i><b>5.6.1</b> Блок сбора данных</a></li>
+<li class="chapter" data-level="5.6.2" data-path="targets.html"><a href="targets.html#блок-нормализации-данных"><i class="fa fa-check"></i><b>5.6.2</b> Блок нормализации данных</a></li>
+<li class="chapter" data-level="5.6.3" data-path="targets.html"><a href="targets.html#блок-моделирования-и-прогнозирования"><i class="fa fa-check"></i><b>5.6.3</b> Блок моделирования и прогнозирования</a></li>
+<li class="chapter" data-level="5.6.4" data-path="targets.html"><a href="targets.html#блок-подготовки-результатов"><i class="fa fa-check"></i><b>5.6.4</b> Блок подготовки результатов</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="method.html"><a href="method.html"><i class="fa fa-check"></i><b>6</b> Методическое обеспечение</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="method.html"><a href="method.html#история-формирования-методологии"><i class="fa fa-check"></i><b>6.1</b> История формирования методологии</a></li>
+<li class="chapter" data-level="6.2" data-path="method.html"><a href="method.html#базовый-методический-подход"><i class="fa fa-check"></i><b>6.2</b> Базовый методический подход</a></li>
+<li class="chapter" data-level="6.3" data-path="method.html"><a href="method.html#внутриотраслевой-баланс"><i class="fa fa-check"></i><b>6.3</b> Внутриотраслевой баланс</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="method.html"><a href="method.html#концепция-балансовой-модели-скииэ"><i class="fa fa-check"></i><b>6.3.1</b> Концепция балансовой модели СКИиЭ</a></li>
+<li class="chapter" data-level="6.3.2" data-path="method.html"><a href="method.html#цели-воб-скииэ"><i class="fa fa-check"></i><b>6.3.2</b> Цели ВОБ СКИиЭ</a></li>
+<li class="chapter" data-level="6.3.3" data-path="method.html"><a href="method.html#задачи-воб-скииэ"><i class="fa fa-check"></i><b>6.3.3</b> Задачи ВОБ СКИиЭ</a></li>
+<li class="chapter" data-level="6.3.4" data-path="method.html"><a href="method.html#общие-принципы"><i class="fa fa-check"></i><b>6.3.4</b> Общие принципы</a></li>
+<li class="chapter" data-level="6.3.5" data-path="method.html"><a href="method.html#метод"><i class="fa fa-check"></i><b>6.3.5</b> Метод</a></li>
+<li class="chapter" data-level="6.3.6" data-path="method.html"><a href="method.html#сферы-применения"><i class="fa fa-check"></i><b>6.3.6</b> Сферы применения</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="method.html"><a href="method.html#поддержка-принятия-решений-в-управлении-транспортной-системой-региона"><i class="fa fa-check"></i><b>6.4</b> Поддержка принятия решений в управлении транспортной системой региона</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="method.html"><a href="method.html#цели-тэб"><i class="fa fa-check"></i><b>6.4.1</b> Цели ТЭБ</a></li>
+<li class="chapter" data-level="6.4.2" data-path="method.html"><a href="method.html#задачи-тэб"><i class="fa fa-check"></i><b>6.4.2</b> Задачи ТЭБ</a></li>
+<li class="chapter" data-level="6.4.3" data-path="method.html"><a href="method.html#общие-принципы-формирования-баланса"><i class="fa fa-check"></i><b>6.4.3</b> Общие принципы формирования баланса</a></li>
+<li class="chapter" data-level="6.4.4" data-path="method.html"><a href="method.html#состав-системы-показателей-баланса"><i class="fa fa-check"></i><b>6.4.4</b> Состав системы показателей баланса</a></li>
+<li class="chapter" data-level="6.4.5" data-path="method.html"><a href="method.html#базовые-технико-экономические-показатели"><i class="fa fa-check"></i><b>6.4.5</b> Базовые технико-экономические показатели</a></li>
+<li class="chapter" data-level="6.4.6" data-path="method.html"><a href="method.html#относительные-коэффициенты"><i class="fa fa-check"></i><b>6.4.6</b> Относительные коэффициенты</a></li>
+<li class="chapter" data-level="6.4.7" data-path="method.html"><a href="method.html#обобщающие-показатели-эффективности"><i class="fa fa-check"></i><b>6.4.7</b> Обобщающие показатели эффективности</a></li>
+<li class="chapter" data-level="6.4.8" data-path="method.html"><a href="method.html#не-публикуемые-разделы-методики"><i class="fa fa-check"></i><b>6.4.8</b> Не публикуемые разделы Методики</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="method.html"><a href="method.html#оценка-влияния-инвестиционных-проектов-на-развитие-города"><i class="fa fa-check"></i><b>6.5</b> Оценка влияния инвестиционных проектов на развитие города</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="method.html"><a href="method.html#назначение-методики"><i class="fa fa-check"></i><b>6.5.1</b> Назначение методики</a></li>
+<li class="chapter" data-level="6.5.2" data-path="method.html"><a href="method.html#нормативные-ссылки-и-литература"><i class="fa fa-check"></i><b>6.5.2</b> Нормативные ссылки и литература</a></li>
+<li class="chapter" data-level="6.5.3" data-path="method.html"><a href="method.html#термины-и-определения"><i class="fa fa-check"></i><b>6.5.3</b> Термины и определения</a></li>
+<li class="chapter" data-level="6.5.4" data-path="method.html"><a href="method.html#обозначения-сокращения-и-источники-данных"><i class="fa fa-check"></i><b>6.5.4</b> Обозначения, сокращения и источники данных</a></li>
+<li class="chapter" data-level="6.5.5" data-path="method.html"><a href="method.html#общие-положения"><i class="fa fa-check"></i><b>6.5.5</b> Общие положения</a></li>
+<li class="chapter" data-level="6.5.6" data-path="method.html"><a href="method.html#оценка-текущего-и-прогнозного-состояния-развития-городов"><i class="fa fa-check"></i><b>6.5.6</b> Оценка текущего и прогнозного состояния развития городов</a></li>
+<li class="chapter" data-level="6.5.7" data-path="method.html"><a href="method.html#интегральная-оценка-инвестиционного-потенциала-городов"><i class="fa fa-check"></i><b>6.5.7</b> Интегральная оценка инвестиционного потенциала городов</a></li>
+<li class="chapter" data-level="6.5.8" data-path="method.html"><a href="method.html#оценка-инвестиционной-привлекательности-целевых-направлений-отраслей-городской-экономики"><i class="fa fa-check"></i><b>6.5.8</b> Оценка инвестиционной привлекательности целевых направлений (отраслей) городской экономики</a></li>
+<li class="chapter" data-level="6.5.9" data-path="method.html"><a href="method.html#оценка-и-ранжирование-городов-для-каждого-целевого-направления-отрасли-городской-экономики"><i class="fa fa-check"></i><b>6.5.9</b> Оценка и ранжирование городов для каждого целевого направления (отрасли) городской экономики</a></li>
+<li class="chapter" data-level="6.5.10" data-path="method.html"><a href="method.html#оценка-эффективности-реализации-инвестиционного-проекта-и-его-влияния-на-прогнозные-показатели-развития-города"><i class="fa fa-check"></i><b>6.5.10</b> Оценка эффективности реализации инвестиционного проекта и его влияния на прогнозные показатели развития города</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="method.html"><a href="method.html#методика-расчета-времени-до-отказа-инженерных-систем"><i class="fa fa-check"></i><b>6.6</b> Методика расчета времени до отказа инженерных систем</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="method.html"><a href="method.html#интегральный-метод-диагностики"><i class="fa fa-check"></i><b>6.6.1</b> Интегральный метод диагностики</a></li>
+<li class="chapter" data-level="6.6.2" data-path="method.html"><a href="method.html#основные-этапы-общая-схема-проведения-работ-в-рамках-интегрального-метода-на-примере-трубопровода"><i class="fa fa-check"></i><b>6.6.2</b> Основные этапы (общая схема) проведения работ в рамках интегрального метода (на примере трубопровода)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="math.html"><a href="math.html"><i class="fa fa-check"></i><b>7</b> Математическое обеспечение</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="math.html"><a href="math.html#demography"><i class="fa fa-check"></i><b>7.1</b> Модель прогнозирования численности населения</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="math.html"><a href="math.html#назначение-2"><i class="fa fa-check"></i><b>7.1.1</b> Назначение</a></li>
+<li class="chapter" data-level="7.1.2" data-path="math.html"><a href="math.html#основные-параметры-показатели-и-обозначения"><i class="fa fa-check"></i><b>7.1.2</b> Основные параметры, показатели и обозначения</a></li>
+<li class="chapter" data-level="7.1.3" data-path="math.html"><a href="math.html#используемые-формулы-и-допущения"><i class="fa fa-check"></i><b>7.1.3</b> Используемые формулы и допущения</a></li>
+<li class="chapter" data-level="7.1.4" data-path="math.html"><a href="math.html#исходные-данные-для-модели"><i class="fa fa-check"></i><b>7.1.4</b> Исходные данные для модели</a></li>
+<li class="chapter" data-level="7.1.5" data-path="math.html"><a href="math.html#описание-итоговых-показателей-расчета"><i class="fa fa-check"></i><b>7.1.5</b> Описание итоговых показателей расчета</a></li>
+<li class="chapter" data-level="7.1.6" data-path="math.html"><a href="math.html#детальное-описание-алгоритма-произведения-расчетов"><i class="fa fa-check"></i><b>7.1.6</b> Детальное описание алгоритма произведения расчетов</a></li>
+<li class="chapter" data-level="7.1.7" data-path="math.html"><a href="math.html#область-границы-допустимого-применения-математической-модели"><i class="fa fa-check"></i><b>7.1.7</b> Область (границы) допустимого применения математической модели</a></li>
+<li class="chapter" data-level="7.1.8" data-path="math.html"><a href="math.html#оценка-точности-математических-моделей"><i class="fa fa-check"></i><b>7.1.8</b> Оценка точности математических моделей</a></li>
+<li class="chapter" data-level="7.1.9" data-path="math.html"><a href="math.html#выводы"><i class="fa fa-check"></i><b>7.1.9</b> Выводы</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="math.html"><a href="math.html#system_dyn"><i class="fa fa-check"></i><b>7.2</b> Модель системной динамики города</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="math.html"><a href="math.html#назначение-модели"><i class="fa fa-check"></i><b>7.2.1</b> Назначение модели</a></li>
+<li class="chapter" data-level="7.2.2" data-path="math.html"><a href="math.html#базовый-вид-модели"><i class="fa fa-check"></i><b>7.2.2</b> Базовый вид модели</a></li>
+<li class="chapter" data-level="7.2.3" data-path="math.html"><a href="math.html#описание-входных-переменных-модели"><i class="fa fa-check"></i><b>7.2.3</b> Описание входных переменных модели</a></li>
+<li class="chapter" data-level="7.2.4" data-path="math.html"><a href="math.html#описание-результата-модели"><i class="fa fa-check"></i><b>7.2.4</b> Описание результата модели</a></li>
+<li class="chapter" data-level="7.2.5" data-path="math.html"><a href="math.html#калибруемые-параметры-модели"><i class="fa fa-check"></i><b>7.2.5</b> Калибруемые параметры модели</a></li>
+<li class="chapter" data-level="7.2.6" data-path="math.html"><a href="math.html#калибровка-модели"><i class="fa fa-check"></i><b>7.2.6</b> Калибровка модели</a></li>
+<li class="chapter" data-level="7.2.7" data-path="math.html"><a href="math.html#результат-применения-модели"><i class="fa fa-check"></i><b>7.2.7</b> Результат применения модели</a></li>
+<li class="chapter" data-level="7.2.8" data-path="math.html"><a href="math.html#требования-к-поддержке-модели-и-регулярности-ее-рекалибровки."><i class="fa fa-check"></i><b>7.2.8</b> Требования к поддержке модели и регулярности ее рекалибровки.</a></li>
+<li class="chapter" data-level="7.2.9" data-path="math.html"><a href="math.html#допущения-необходимые-для-проведения-расчетов"><i class="fa fa-check"></i><b>7.2.9</b> Допущения, необходимые для проведения расчетов</a></li>
+<li class="chapter" data-level="7.2.10" data-path="math.html"><a href="math.html#полное-описание-алгоритма-проведения-расчетов"><i class="fa fa-check"></i><b>7.2.10</b> Полное описание алгоритма проведения расчетов</a></li>
+<li class="chapter" data-level="7.2.11" data-path="math.html"><a href="math.html#область-границы-допустимого-применения-математических-моделей"><i class="fa fa-check"></i><b>7.2.11</b> Область (границы) допустимого применения математических моделей</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="math.html"><a href="math.html#MOB_industry"><i class="fa fa-check"></i><b>7.3</b> Модель прогнозирования экономических показателей СЭР в разрезе отраслей</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="math.html"><a href="math.html#назначение-модели-1"><i class="fa fa-check"></i><b>7.3.1</b> Назначение модели</a></li>
+<li class="chapter" data-level="7.3.2" data-path="math.html"><a href="math.html#базовый-вид-модели-в-общем-виде"><i class="fa fa-check"></i><b>7.3.2</b> Базовый вид модели в общем виде</a></li>
+<li class="chapter" data-level="7.3.3" data-path="math.html"><a href="math.html#описание-входных-переменных-модели-1"><i class="fa fa-check"></i><b>7.3.3</b> Описание входных переменных модели</a></li>
+<li class="chapter" data-level="7.3.4" data-path="math.html"><a href="math.html#описание-исходных-показателей"><i class="fa fa-check"></i><b>7.3.4</b> Описание исходных показателей</a></li>
+<li class="chapter" data-level="7.3.5" data-path="math.html"><a href="math.html#особенности-таблицы-выпуска-товаров-и-услуг"><i class="fa fa-check"></i><b>7.3.5</b> Особенности таблицы выпуска товаров и услуг</a></li>
+<li class="chapter" data-level="7.3.6" data-path="math.html"><a href="math.html#описание-результата-модели-1"><i class="fa fa-check"></i><b>7.3.6</b> Описание результата модели</a></li>
+<li class="chapter" data-level="7.3.7" data-path="math.html"><a href="math.html#калибровка-модели-1"><i class="fa fa-check"></i><b>7.3.7</b> Калибровка модели</a></li>
+<li class="chapter" data-level="7.3.8" data-path="math.html"><a href="math.html#результат-применения-модели-1"><i class="fa fa-check"></i><b>7.3.8</b> Результат применения модели</a></li>
+<li class="chapter" data-level="7.3.9" data-path="math.html"><a href="math.html#требования-к-поддержке-модели-и-регулярности-ее-рекалибровки"><i class="fa fa-check"></i><b>7.3.9</b> Требования к поддержке модели и регулярности ее рекалибровки</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="math.html"><a href="math.html#fin_calc"><i class="fa fa-check"></i><b>7.4</b> Модель оценки финансовой результативности инвестиционного проекта</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="math.html"><a href="math.html#назначение-модели-2"><i class="fa fa-check"></i><b>7.4.1</b> Назначение модели</a></li>
+<li class="chapter" data-level="7.4.2" data-path="math.html"><a href="math.html#базовый-вид-модели-1"><i class="fa fa-check"></i><b>7.4.2</b> Базовый вид модели</a></li>
+<li class="chapter" data-level="7.4.3" data-path="math.html"><a href="math.html#порядок-расчета"><i class="fa fa-check"></i><b>7.4.3</b> Порядок расчета</a></li>
+<li class="chapter" data-level="7.4.4" data-path="math.html"><a href="math.html#описание-входных-переменных-модели-2"><i class="fa fa-check"></i><b>7.4.4</b> Описание входных переменных модели</a></li>
+<li class="chapter" data-level="7.4.5" data-path="math.html"><a href="math.html#fin_calc_data"><i class="fa fa-check"></i><b>7.4.5</b> Источники данных для наборов переменных</a></li>
+<li class="chapter" data-level="7.4.6" data-path="math.html"><a href="math.html#описание-результата-модели-2"><i class="fa fa-check"></i><b>7.4.6</b> Описание результата модели</a></li>
+<li class="chapter" data-level="7.4.7" data-path="math.html"><a href="math.html#калибровка-модели-2"><i class="fa fa-check"></i><b>7.4.7</b> Калибровка модели</a></li>
+<li class="chapter" data-level="7.4.8" data-path="math.html"><a href="math.html#требования-к-поддержке-модели-и-регулярности-ее-рекалибровки-1"><i class="fa fa-check"></i><b>7.4.8</b> Требования к поддержке модели и регулярности ее рекалибровки</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="math.html"><a href="math.html#project_impact"><i class="fa fa-check"></i><b>7.5</b> Модель оценки влияния инвестиционного проекта на социально-экономические показатели</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="math.html"><a href="math.html#назначение-модели-3"><i class="fa fa-check"></i><b>7.5.1</b> Назначение модели</a></li>
+<li class="chapter" data-level="7.5.2" data-path="math.html"><a href="math.html#термины-и-определения-1"><i class="fa fa-check"></i><b>7.5.2</b> Термины и определения</a></li>
+<li class="chapter" data-level="7.5.3" data-path="math.html"><a href="math.html#базовый-вид-модели-2"><i class="fa fa-check"></i><b>7.5.3</b> Базовый вид модели</a></li>
+<li class="chapter" data-level="7.5.4" data-path="math.html"><a href="math.html#мультипликативный-эффект"><i class="fa fa-check"></i><b>7.5.4</b> Мультипликативный эффект</a></li>
+<li class="chapter" data-level="7.5.5" data-path="math.html"><a href="math.html#системно-динамический-эффект"><i class="fa fa-check"></i><b>7.5.5</b> Системно-динамический эффект</a></li>
+<li class="chapter" data-level="7.5.6" data-path="math.html"><a href="math.html#расчет-эффектов-от-инвестиционных-проектов-по-целевым-показателям"><i class="fa fa-check"></i><b>7.5.6</b> Расчет эффектов от инвестиционных проектов по целевым показателям</a></li>
+<li class="chapter" data-level="7.5.7" data-path="math.html"><a href="math.html#расчет-влияния-ип-на-динамику-инвестиционных-потенциалов"><i class="fa fa-check"></i><b>7.5.7</b> Расчет влияния ИП на динамику инвестиционных потенциалов</a></li>
+<li class="chapter" data-level="7.5.8" data-path="math.html"><a href="math.html#описание-входных-переменных-модели-3"><i class="fa fa-check"></i><b>7.5.8</b> Описание входных переменных модели</a></li>
+<li class="chapter" data-level="7.5.9" data-path="math.html"><a href="math.html#описание-результата-модели-3"><i class="fa fa-check"></i><b>7.5.9</b> Описание результата модели</a></li>
+<li class="chapter" data-level="7.5.10" data-path="math.html"><a href="math.html#kalibr_project_impact"><i class="fa fa-check"></i><b>7.5.10</b> Калибровка модели</a></li>
+<li class="chapter" data-level="7.5.11" data-path="math.html"><a href="math.html#результат-применения-модели-2"><i class="fa fa-check"></i><b>7.5.11</b> Результат применения модели</a></li>
+<li class="chapter" data-level="7.5.12" data-path="math.html"><a href="math.html#требования-к-поддержке-модели-и-регулярности-ее-рекалибровки-2"><i class="fa fa-check"></i><b>7.5.12</b> Требования к поддержке модели и регулярности ее рекалибровки</a></li>
+<li class="chapter" data-level="7.5.13" data-path="math.html"><a href="math.html#развитие-модели"><i class="fa fa-check"></i><b>7.5.13</b> Развитие модели</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="math.html"><a href="math.html#portfolio"><i class="fa fa-check"></i><b>7.6</b> Модель оценки влияния портфеля инвестиционных проектов на социально-экономические показатели</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="math.html"><a href="math.html#назначение-модели-4"><i class="fa fa-check"></i><b>7.6.1</b> Назначение модели</a></li>
+<li class="chapter" data-level="7.6.2" data-path="math.html"><a href="math.html#базовый-вид-модели-3"><i class="fa fa-check"></i><b>7.6.2</b> Базовый вид модели</a></li>
+<li class="chapter" data-level="7.6.3" data-path="math.html"><a href="math.html#описание-входных-переменных-модели-4"><i class="fa fa-check"></i><b>7.6.3</b> Описание входных переменных модели</a></li>
+<li class="chapter" data-level="7.6.4" data-path="math.html"><a href="math.html#проведение-расчета-эффектов"><i class="fa fa-check"></i><b>7.6.4</b> Проведение расчета эффектов</a></li>
+<li class="chapter" data-level="7.6.5" data-path="math.html"><a href="math.html#выходные-показатели-модели"><i class="fa fa-check"></i><b>7.6.5</b> Выходные показатели модели</a></li>
+<li class="chapter" data-level="7.6.6" data-path="math.html"><a href="math.html#результат-применения-модели-3"><i class="fa fa-check"></i><b>7.6.6</b> Результат применения модели</a></li>
+<li class="chapter" data-level="7.6.7" data-path="math.html"><a href="math.html#требования-к-поддержке-модели-и-регулярности-ее-рекалибровки-3"><i class="fa fa-check"></i><b>7.6.7</b> Требования к поддержке модели и регулярности ее рекалибровки</a></li>
+<li class="chapter" data-level="7.6.8" data-path="math.html"><a href="math.html#развитие-модели-1"><i class="fa fa-check"></i><b>7.6.8</b> Развитие модели</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="math.html"><a href="math.html#ESG"><i class="fa fa-check"></i><b>7.7</b> Модель оценки влияния городских парков на показатели социально-экономического развития города и ESG (Ecology, Social, Governance)</a>
+<ul>
+<li class="chapter" data-level="7.7.1" data-path="math.html"><a href="math.html#назначение-модели-5"><i class="fa fa-check"></i><b>7.7.1</b> Назначение модели</a></li>
+<li class="chapter" data-level="7.7.2" data-path="math.html"><a href="math.html#базовый-вид-модели-4"><i class="fa fa-check"></i><b>7.7.2</b> Базовый вид модели</a></li>
+<li class="chapter" data-level="7.7.3" data-path="math.html"><a href="math.html#входные-данные"><i class="fa fa-check"></i><b>7.7.3</b> Входные данные</a></li>
+<li class="chapter" data-level="7.7.4" data-path="math.html"><a href="math.html#выходные-данные"><i class="fa fa-check"></i><b>7.7.4</b> Выходные данные</a></li>
+<li class="chapter" data-level="7.7.5" data-path="math.html"><a href="math.html#результат-применения-модели-4"><i class="fa fa-check"></i><b>7.7.5</b> Результат применения модели</a></li>
+<li class="chapter" data-level="7.7.6" data-path="math.html"><a href="math.html#требования-к-поддержке-модели-и-регулярности-рекалибровки"><i class="fa fa-check"></i><b>7.7.6</b> Требования к поддержке модели и регулярности рекалибровки</a></li>
+<li class="chapter" data-level="7.7.7" data-path="math.html"><a href="math.html#допущения-необходимые-для-проведения-расчетов-1"><i class="fa fa-check"></i><b>7.7.7</b> Допущения, необходимые для проведения расчетов</a></li>
+<li class="chapter" data-level="7.7.8" data-path="math.html"><a href="math.html#область-границы-допустимого-применения-математической-модели-1"><i class="fa fa-check"></i><b>7.7.8</b> Область (границы) допустимого применения математической модели</a></li>
+<li class="chapter" data-level="7.7.9" data-path="math.html"><a href="math.html#pril_1_ESG"><i class="fa fa-check"></i><b>7.7.9</b> Приложение 1</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="math.html"><a href="math.html#GIH"><i class="fa fa-check"></i><b>7.8</b> Модель сценарного расчета социально-экономической результативности транспортных проектов с использованием методики GIH</a>
+<ul>
+<li class="chapter" data-level="7.8.1" data-path="math.html"><a href="math.html#термины-и-определения-2"><i class="fa fa-check"></i><b>7.8.1</b> Термины и определения</a></li>
+<li class="chapter" data-level="7.8.2" data-path="math.html"><a href="math.html#назначение-модели-6"><i class="fa fa-check"></i><b>7.8.2</b> Назначение модели</a></li>
+<li class="chapter" data-level="7.8.3" data-path="math.html"><a href="math.html#входные-данные-1"><i class="fa fa-check"></i><b>7.8.3</b> Входные данные</a></li>
+<li class="chapter" data-level="7.8.4" data-path="math.html"><a href="math.html#выходные-данные-1"><i class="fa fa-check"></i><b>7.8.4</b> Выходные данные</a></li>
+<li class="chapter" data-level="7.8.5" data-path="math.html"><a href="math.html#результат-применения-модели-5"><i class="fa fa-check"></i><b>7.8.5</b> Результат применения модели</a></li>
+<li class="chapter" data-level="7.8.6" data-path="math.html"><a href="math.html#требования-к-поддержке-модели-и-регулярности-рекалибровки-1"><i class="fa fa-check"></i><b>7.8.6</b> Требования к поддержке модели и регулярности рекалибровки</a></li>
+<li class="chapter" data-level="7.8.7" data-path="math.html"><a href="math.html#допущения-необходимые-для-проведения-расчетов-2"><i class="fa fa-check"></i><b>7.8.7</b> Допущения, необходимые для проведения расчетов</a></li>
+</ul></li>
+<li class="chapter" data-level="7.9" data-path="math.html"><a href="math.html#OSEN"><i class="fa fa-check"></i><b>7.9</b> Модель оценки обеспеченности общественной инфраструктурой</a>
+<ul>
+<li class="chapter" data-level="7.9.1" data-path="math.html"><a href="math.html#назначение-модели-7"><i class="fa fa-check"></i><b>7.9.1</b> Назначение модели</a></li>
+<li class="chapter" data-level="7.9.2" data-path="math.html"><a href="math.html#термины-и-определения-3"><i class="fa fa-check"></i><b>7.9.2</b> Термины и определения</a></li>
+<li class="chapter" data-level="7.9.3" data-path="math.html"><a href="math.html#базовый-вид-модели-5"><i class="fa fa-check"></i><b>7.9.3</b> Базовый вид модели</a></li>
+<li class="chapter" data-level="7.9.4" data-path="math.html"><a href="math.html#описание-входных-переменных-модели-5"><i class="fa fa-check"></i><b>7.9.4</b> Описание входных переменных Модели</a></li>
+<li class="chapter" data-level="7.9.5" data-path="math.html"><a href="math.html#описание-результата-модели-4"><i class="fa fa-check"></i><b>7.9.5</b> Описание результата модели</a></li>
+<li class="chapter" data-level="7.9.6" data-path="math.html"><a href="math.html#калибровка-модели-3"><i class="fa fa-check"></i><b>7.9.6</b> Калибровка модели</a></li>
+<li class="chapter" data-level="7.9.7" data-path="math.html"><a href="math.html#результат-применения-модели-6"><i class="fa fa-check"></i><b>7.9.7</b> Результат применения модели</a></li>
+<li class="chapter" data-level="7.9.8" data-path="math.html"><a href="math.html#требования-к-поддержке-модели-и-регулярности-рекалибровки-2"><i class="fa fa-check"></i><b>7.9.8</b> Требования к поддержке модели и регулярности рекалибровки</a></li>
+<li class="chapter" data-level="7.9.9" data-path="math.html"><a href="math.html#допущения-необходимые-для-проведения-расчетов-3"><i class="fa fa-check"></i><b>7.9.9</b> Допущения, необходимые для проведения расчетов</a></li>
+<li class="chapter" data-level="7.9.10" data-path="math.html"><a href="math.html#описание-алгоритма-произведения-расчетов"><i class="fa fa-check"></i><b>7.9.10</b> Описание алгоритма произведения расчетов</a></li>
+<li class="chapter" data-level="7.9.11" data-path="math.html"><a href="math.html#область-границы-допустимого-применения-математической-модели-2"><i class="fa fa-check"></i><b>7.9.11</b> Область (границы) допустимого применения математической модели</a></li>
+</ul></li>
+<li class="chapter" data-level="7.10" data-path="math.html"><a href="math.html#сircular_migration"><i class="fa fa-check"></i><b>7.10</b> Модель оценки маятниковой миграции</a>
+<ul>
+<li class="chapter" data-level="7.10.1" data-path="math.html"><a href="math.html#назначение-модели-8"><i class="fa fa-check"></i><b>7.10.1</b> Назначение модели</a></li>
+<li class="chapter" data-level="7.10.2" data-path="math.html"><a href="math.html#термины-и-определения-4"><i class="fa fa-check"></i><b>7.10.2</b> Термины и определения</a></li>
+<li class="chapter" data-level="7.10.3" data-path="math.html"><a href="math.html#базовый-вид-модели-6"><i class="fa fa-check"></i><b>7.10.3</b> Базовый вид модели</a></li>
+<li class="chapter" data-level="7.10.4" data-path="math.html"><a href="math.html#описание-входных-переменных-модели-6"><i class="fa fa-check"></i><b>7.10.4</b> Описание входных переменных модели</a></li>
+<li class="chapter" data-level="7.10.5" data-path="math.html"><a href="math.html#описание-результата-модели-5"><i class="fa fa-check"></i><b>7.10.5</b> Описание результата модели</a></li>
+<li class="chapter" data-level="7.10.6" data-path="math.html"><a href="math.html#калибровка-модели-4"><i class="fa fa-check"></i><b>7.10.6</b> Калибровка модели</a></li>
+<li class="chapter" data-level="7.10.7" data-path="math.html"><a href="math.html#результат-применения-модели-7"><i class="fa fa-check"></i><b>7.10.7</b> Результат применения модели</a></li>
+<li class="chapter" data-level="7.10.8" data-path="math.html"><a href="math.html#требования-к-поддержке-модели-и-регулярности-ее-рекалибровки-4"><i class="fa fa-check"></i><b>7.10.8</b> Требования к поддержке модели и регулярности ее рекалибровки</a></li>
+</ul></li>
+<li class="chapter" data-level="7.11" data-path="math.html"><a href="math.html#Pipe"><i class="fa fa-check"></i><b>7.11</b> Модель оценки технического состояния, износа и сроков безопасной эксплуатации инфраструктуры</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="soft.html"><a href="soft.html"><i class="fa fa-check"></i><b>8</b> Программное обеспечение</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="soft.html"><a href="soft.html#программа-цифровой-двойник-города"><i class="fa fa-check"></i><b>8.1</b> Программа “Цифровой двойник города”</a></li>
+<li class="chapter" data-level="8.2" data-path="soft.html"><a href="soft.html#программа-восстановление-и-прогнозирование-межотраслевых-и-топливно-энергетических-балансов"><i class="fa fa-check"></i><b>8.2</b> Программа “Восстановление и прогнозирование межотраслевых и топливно-энергетических балансов”</a></li>
+<li class="chapter" data-level="8.3" data-path="soft.html"><a href="soft.html#программа-цифровой-двойник-трубопровода"><i class="fa fa-check"></i><b>8.3</b> Программа “Цифровой двойник трубопровода”</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="analytics.html"><a href="analytics.html"><i class="fa fa-check"></i><b>9</b> Аналитические работы</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="analytics.html"><a href="analytics.html#анализ-региональных-выбросов-о-бедном-кемерово-замолвите-слово"><i class="fa fa-check"></i><b>9.1</b> Анализ региональных выбросов: о бедном Кемерово замолвите слово</a></li>
+<li class="chapter" data-level="9.2" data-path="analytics.html"><a href="analytics.html#анализ-региональных-выбросов-взгляд-в-будущее"><i class="fa fa-check"></i><b>9.2</b> Анализ региональных выбросов: взгляд в будущее</a></li>
+<li class="chapter" data-level="9.3" data-path="analytics.html"><a href="analytics.html#ссылки-на-статьи-на-внешних-ресурсах"><i class="fa fa-check"></i><b>9.3</b> Ссылки на статьи на внешних ресурсах</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Цифровой двойник города</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Цифровой двойник города</h1>
+<h2 class="subtitle"><em>City Digital Twin</em></h2>
+<p class="date"><em>2024-02-21</em></p>
+</div>
+<div id="DTOpenBook" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> Открытая книга ЦД<a href="index.html#DTOpenBook" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Открытая книга Цифрового Двойника (ЦД) представляет свод опыта по разработке систем поддержки принятия управлеческих (государственных) решений в области социально-экономического развития территорий (регионов, городов, муниципальных образований, агломераций), приобретенный коллективом компании “Цифровой Двойник” с 2015 года и по сей день.</p>
+<p>Целью компании “Цифровой Двойник” является содействие лицам разрабатывающим и принимающим управлеческие решения в повышении результативности и эффективности их основной деятельности.</p>
+<p>Компания “Цифровой Двойник” оказывает услуги по:</p>
+<ul>
+<li>подписке на исторические и сценарно-прогнозные данные о социально-экономическом развитии территорий</li>
+<li>разработке методического, программного, информационно-аналитического обеспечения</li>
+<li>совершенствованию систем управления и поддержки принятия решений.</li>
+</ul>
+<p>Команда компании ООО «ЦД» — коллектив специалистов в области прикладной математики, экономики, инженерных дисциплин, программирования, системного анализа и управления проектами, обеспечивающих выработку принципиально новых, высокоточных механизмов поддержки государственных решений.</p>
+<p>Основатель и руководитель компании ООО «ЦД» - <a href="https://t.me/sergeygumerov">Сергей Гумеров</a></p>
+<div id="ReferenceList" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Проекты компании<a href="index.html#ReferenceList" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Команда ООО «ЦД» участвовала в реализации следующих проектов:</p>
+<ul>
+<li>Топливно-энергетический баланс (2022-2023). Среднесрочное и долгосрочное прогнозирование. Оценка межтопливной конкуренции. Интеграция прогнозов социально-экономического и энергетического развития<br />
+</li>
+<li>ГеоВЭБ (2020-2023) – геоаналитическая система. Коммплекс методического, математического и информационного обеспечения оценки влияния инвестиционных проектов на социальное и экономическое развитие городов РФ</li>
+<li>Межотраслевой баланс (2015-2019) системы коммунальной инфраструктуры и энергетики Санкт-Петербурга (система мониторинга, диагностики и оценки влияния)</li>
+<li>Транспортно-экономический баланс Санкт-Петербурга (2015-2019)</li>
+<li>Внутриотраслевые балансы (2015-2018), водоснабжения, водоотведения и теплоснабжения (система мониторинга, диагностики и оценки влияния)</li>
+<li>Система мониторинга рисков (2017), исполнения обязательств при строительстве с использованием бюджетных средств</li>
+<li>Система поддержки принятия тарифно-балансовых, отраслевых и инвестиционных решений в энергетике и ЖКХ (2015-2019),</li>
+<li>Система диагностирования и предупреждения аварий в жилых домах (2018)</li>
+<li>Система мониторинга технического состояния магистральных нефтепроводов и нефтепродуктопроводов, магистральной газотранспортной системы РФ. (2005-2015)</li>
+</ul>
+</div>
+<div id="Competence" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Компетенции<a href="index.html#Competence" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Базовым ноу-хау команды ООО «ЦД» является методология прикладного математического моделирования и анализа, реализованная в форме расчетно-аналитической платформы «Цифровой Двойник города», обеспечивающей мониторинг, моделирование, прогнозирования и оценку влияния государственных решений и внешних факторов.</p>
+<p>Базовыми компетенциями команды является:</p>
+<ul>
+<li>формирование моделей социально-экономического и отраслевого развития (международного, межстранового, межрегионального, агломерационного, муниципального)<br />
+</li>
+<li>социально-экономическое обоснование планов и программ развития территорий и отраслей, с учетом фактического и прогнозного положения территории и окружения (социльно-экономического, природно-антропогенного)<br />
+</li>
+<li>оценка и прогноз спроса и предложения, потребления и производства на краткосрочных, среднесрочных и долгосрочных периодах<br />
+</li>
+<li>формирование межотраслевых и межтерриториальных балансов территорий на фактический и прогнозно-плановый периоды<br />
+</li>
+<li>формирование моделей внутриотраслевых балансов (энергетика, ЖКХ, транспорт, строительство) в натуральных, энергетических и финансовых величинах для проведения оценки, сценарного анализа и оптимального планирования развития отдельных отраслей экономики<br />
+</li>
+<li>анализ и планирование развития производственных мощностей - нагрузок по видам экономической деятельности и технологическим переделам<br />
+</li>
+<li>мониторинг, оценка, анализ и управление техническими, экономическими, социальными и экологическими рисками (управление надежностью и безопасностью)<br />
+</li>
+<li>мониторинг, прогноз и управление техническим состоянием инфраструктуры<br />
+</li>
+<li>формирование и оценки необходимых объемов капитальных вложений в развитие и реконструкцию основных фондов<br />
+</li>
+<li>ценообразование и поддержка тарифного регулирования<br />
+</li>
+<li>формирование и обоснование документов отраслевого и территориального планирования (отраслевые и территориальные схемы)<br />
+</li>
+<li>подготовка, обоснование и оценка результативности комплексных (целевых) программ развития, инвестиционных программ, портфелей и проектов, производственных программ и программ эксплуатации</li>
+<li>разработка информационно-моделирующего программного обеспечения, библиотек эконометрических и физико-математических моделей, разработке хранилищ данных по состоянию территорий и отраслей</li>
+<li>разработка моделей жизненного цикла предприятий и отдельных активов</li>
+<li>разработка постоянно-действующих моделей технического состояния зданий и сооружений, трубопроводов различного назначения</li>
+<li>разработка моделей торговой и транспортной деятельности</li>
+<li>разработка моделей потоков риска: технико-экономических, социальных, экологических</li>
+</ul>
+<p>Команда обладает опытом разработки научно-методической и нормативно-правовой документации, документов планирования (стратегического, инвестиционного и производственного), программного и информационного обеспечения.</p>
+</div>
+<div id="Prototypes" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Прототипы решений<a href="index.html#Prototypes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="https://the-digital-twin.com">Англоязычный сайт Цифрового Двойника про услуги по аналитике</a></li>
+<li><a href="http://parks.dtwin.ru">Оценка влияния создания парков на СЭР</a></li>
+<li><a href="https://ecology.dtwin.ru/">Мониторинг и эффективность экологических затрат</a></li>
+<li><a href="https://mobski.dtwin.ru">Топливно-энергетический баланс территории</a></li>
+<li><a href="https://teb.dtwin.ru">Прогнозирование многоуровневого топливно-энергетического баланса страны</a></li>
+<li><a href="https://fincalc.dtwin.ru">Оценка финансовых потоков от инвестиционных проектов на различных территориях</a></li>
+<li><a href="https://t.me/DT_Prosha_Bot">Телеграм-бот по показателям СЭР территорий</a></li>
+<li><a href="https://asset.dtwin.ru/">Управление предприятием на основе цифрового двойника</a></li>
+<li><a href="https://plan.dtwin.ru/">Платформа стратегического планирования</a></li>
+<li><a href="https://invcomp.dtwin.ru/">Расчет инвестиций в промышленное предприятие</a></li>
+<li><a href="https://ontology.dtwin.ru/">Онтологическая модель энергетической отрасли</a></li>
+<li><a href="https://transport.dtwin.ru/">Оценка результативности транспортных проектов по методике GIH</a></li>
+<li><a href="https://impactweb.dtwin.ru/">Оценка влияния проектов на индекс качества жизни</a></li>
+<li><a href="https://api.dtwin.ru/__docs__/">RESP API доступ к цифровым двойникам городов</a></li>
+</ul>
+</div>
+<div id="он-лайн-платформы-оказания-услуг" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Он-лайн платформы оказания услуг<a href="index.html#он-лайн-платформы-оказания-услуг" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="http://dtwin.city/">SaaS цифровых двойников городов</a></li>
+<li><a href="https://pipeline.dtwin.ru/">SaaS цифровых двойников трубопроводов</a></li>
+</ul>
+</div>
+<div id="MathModels" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Разрабатываемые модели<a href="index.html#MathModels" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Команда Цифрового Двойника ведет собственную научно-техническую деятельность по разработке и совершенствованию математических моделей социальных, экономических и технических систем.</p>
+<div id="макроэкономические-модели" class="section level3 hasAnchor" number="1.5.1">
+<h3><span class="header-section-number">1.5.1</span> Макроэкономические модели<a href="index.html#макроэкономические-модели" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="симулятор-социально-экономического-развития-города" class="section level4 hasAnchor" number="1.5.1.1">
+<h4><span class="header-section-number">1.5.1.1</span> Симулятор социально-экономического развития города<a href="index.html#симулятор-социально-экономического-развития-города" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Назначение </strong> Симулятор предназначен для оценки влияния инвестиционных проектов на социально-экономическое развитие города и региона</p>
+<p><strong>Эффект</strong> Повышение обоснованности и инвестиционной активности в городских инфраструктурных проектах</p>
+<p><strong>Пользователи</strong> Департаменты инвестиционной и промышленной политики, департаменты экономической политики и развития города</p>
+</div>
+<div id="демографическая-модель" class="section level4 hasAnchor" number="1.5.1.2">
+<h4><span class="header-section-number">1.5.1.2</span> Демографическая модель<a href="index.html#демографическая-модель" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Назначение </strong> Прогнозирование динамики численности населения, рождаемости, смертности, миграционных потоков, половозрастной структуры, ожидаемой продолжительности жизни</p>
+<p><strong>Эффект</strong> Повышение объективности и целостности стратегического и инвестиционного планирования</p>
+<p><strong>Пользователи</strong> Инвестиционные банки, девелоперы, правительства регионов и администрации муниципалитетов</p>
+<p><strong>Исходные данные</strong> ретроспектива и прогноз демографических показателей</p>
+</div>
+<div id="социально-экономическая-модель-достижения-национальных-целей" class="section level4 hasAnchor" number="1.5.1.3">
+<h4><span class="header-section-number">1.5.1.3</span> Социально-экономическая модель достижения национальных целей<a href="index.html#социально-экономическая-модель-достижения-национальных-целей" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Назначение</strong> Сценарное прогнозирование динамики доходов/расходов населения/предприятий/бюджета и качества жизни (обеспеченности, доступности, надежности и безопасности)</p>
+<p><strong>Эффект</strong> Повышение адекватности стратегического и инвестиционного планирования</p>
+<p><strong>Пользователи</strong> Инвестиционные банки, девелоперы, правительства регионов и администрации муниципалитетов</p>
+<p><strong>Исходные данные</strong> ретроспектива и прогноз социально-экономических показателей (население, инфраструктура, валовая продукция, энергообеспечение, экология). Параметры крупных, перспективных инвестиционных проектов. Комплексные программы развития города.</p>
+</div>
+</div>
+<div id="межотраслевые-и-отраслевые-модели" class="section level3 hasAnchor" number="1.5.2">
+<h3><span class="header-section-number">1.5.2</span> Межотраслевые и отраслевые модели<a href="index.html#межотраслевые-и-отраслевые-модели" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="модель-межотраслевого-баланса-и-модели-спроса-предложений" class="section level4 hasAnchor" number="1.5.2.1">
+<h4><span class="header-section-number">1.5.2.1</span> Модель межотраслевого баланса и модели спроса-предложений<a href="index.html#модель-межотраслевого-баланса-и-модели-спроса-предложений" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Назначение </strong> Оценка дефицитов-профицитов, спроса и предложений, экспорта-импорта, выпуска-затрат, мощности-нагрузки, эффективности и результативности госрегулирования и мероприятий</p>
+<p><strong>Эффект</strong> Повышение результативности производственных и инвестиционных программ</p>
+<p><strong>Пользователи</strong> Инвестиционные банки, девелоперы, правительства регионов и администрации муниципалитетов</p>
+<p><strong>Исходные данные</strong> ретроспектива и прогноз социально-экономических показателей (население, инфраструктура, валовая продукция, энергообеспечение, экология). Параметры крупных, перспективных инвестиционных проектов. Комплексные программы развития города.</p>
+</div>
+<div id="агломерационная-модель.-модель-межтерриториальных-балансов" class="section level4 hasAnchor" number="1.5.2.2">
+<h4><span class="header-section-number">1.5.2.2</span> Агломерационная модель. Модель межтерриториальных балансов<a href="index.html#агломерационная-модель.-модель-межтерриториальных-балансов" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Назначение</strong> Оценка маятниковых миграций, загруженности и востребованности инфраструктуры, формирование планов развития транспортных систем</p>
+<p><strong>Эффект</strong> Повышение результативности мероприятий и программ развития городской инфраструктуры, с учетом взаимного влияния населенных пунктов</p>
+<p><strong>Исходные данные</strong> ретроспектива и прогноз социально-экономических показателей (население, инфраструктура, валовая продукция, энергообеспечение, экология). Параметры крупных, перспективных инвестиционных проектов. Комплексные программы развития города.</p>
+</div>
+<div id="транспортно-экономический-баланс" class="section level4 hasAnchor" number="1.5.2.3">
+<h4><span class="header-section-number">1.5.2.3</span> Транспортно-экономический баланс<a href="index.html#транспортно-экономический-баланс" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Назначение </strong> Оценка и прогноз состояния транспортной сферы. Определение направлений повышения экономической эффективности сферы общественного транспорта. Обоснования параметров транспортной реформы и отдельных управленческих решений.</p>
+<p><strong>Эффект</strong> Повышение выручки с пассажиров. Снижение удельных затрат на обеспечение заданного уровня транспортной доступности. Повышение инвестпревлекательности отрасли.</p>
+<p><strong>Исходные данные</strong> Территориальная схема развития. Показатели социально-экономического развития. Проекты планировки территорий, схемы улично-дорожной сети. Маршруты и расписания движения общественного транспорта. Отчеты по тарифно-балансовым решениям, бухгалтерские балансы, отчеты и планы по инвестиционным и производственным программам ресурсоснабжающих организаций. Сведения по ретроспективным и перспективным субсидиям бюджета.</p>
+</div>
+<div id="топливно-энергетический-баланс" class="section level4 hasAnchor" number="1.5.2.4">
+<h4><span class="header-section-number">1.5.2.4</span> Топливно-энергетический баланс<a href="index.html#топливно-энергетический-баланс" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Назначение</strong> Оценка и прогноз спроса и предложений топливно-энергетических ресурсов. Определение направлений повышения экономической эффективности сферы. Обоснования параметров регулирования и долгосрочного инвестиционного планирования.</p>
+<p><strong>Эффект</strong> Снижение энергоемкости экономики. Управление энергетической безопасностью экономики и экономической эффективностью энергетики.</p>
+<p><strong>Пользователи</strong> Регуляторы топливно-энергетической сферы.</p>
+</div>
+<div id="выявление-анализ-и-предупреждение-причин-возникновения-дебиторской-задолженности-за-потребление-коммунальных-ресурсов-и-услуг." class="section level4 hasAnchor" number="1.5.2.5">
+<h4><span class="header-section-number">1.5.2.5</span> Выявление, анализ и предупреждение причин возникновения дебиторской задолженности за потребление коммунальных ресурсов и услуг.<a href="index.html#выявление-анализ-и-предупреждение-причин-возникновения-дебиторской-задолженности-за-потребление-коммунальных-ресурсов-и-услуг." class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Назначение </strong> Количественная оценка вклада отдельных причин формирования дебиторской задолженности перед поставщиками коммунальных и энергетических ресурсов»</p>
+<p><strong>Эффект</strong> Снижение темпов роста дебиторской задолженности</p>
+<p><strong>Пользователи</strong> ЕИРЦ. Департамент топливно-энергетического хозяйства. Департамент жилищно-коммунального хозяйства. Ресурсоснабжающие организации</p>
+<p><strong>Исходные данные</strong> Данные ЕИРЦ по структуре и объемам помесячных начислений и оплате коммунальных ресурсов и услуг, в разрезе лицевых счетов, с привязкой к ФИАС. Данные ресурсоснабжающих организаций по структуре и объемам помесячного производства и реализации коммунальных и энергетических ресурсов потребителем с привязкой в ФИАС.</p>
+</div>
+<div id="расчет-оценка-и-анализ-рисков-ресурсоснабжения-территорий" class="section level4 hasAnchor" number="1.5.2.6">
+<h4><span class="header-section-number">1.5.2.6</span> Расчет, оценка и анализ рисков ресурсоснабжения территорий<a href="index.html#расчет-оценка-и-анализ-рисков-ресурсоснабжения-территорий" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Назначение </strong> Распределение рисков гарантированного теплоснабжения и вероятных потерь ресурсов в системах водоснабжения, водоотведения и теплоснабжения</p>
+<p><strong>Эффект</strong> Повышение обоснованности и снижение удельных затрат ресурсоснабжающих организаций.</p>
+<p><strong>Пользователи</strong> Ресурсоснабжающие организации</p>
+<p><strong>Исходные данные</strong> Электронные модели схем теплоснабжения, водоснабжения и водоотведения. Статистика по авариям, технологическим нарушениям, выявленным дефектам, технологическим и аварийным перерывам ресурсоснабжения, с привязкой к участкам сетей ресурсоснабжения. Суточные, месячные и годовые графики тепловых и гидравлических нагрузок, объемов производства, транспортировки и реализации тепловой энергии, холодной и горячей воды, теплоносителя, сточных вод, сжигаемого осадка.</p>
+</div>
+</div>
+<div id="технологические-и-технические-модели" class="section level3 hasAnchor" number="1.5.3">
+<h3><span class="header-section-number">1.5.3</span> Технологические и технические модели<a href="index.html#технологические-и-технические-модели" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="электронная-модель-теплоснабжения-водоснабжения-и-водоотведения" class="section level4 hasAnchor" number="1.5.3.1">
+<h4><span class="header-section-number">1.5.3.1</span> Электронная модель теплоснабжения, водоснабжения и водоотведения<a href="index.html#электронная-модель-теплоснабжения-водоснабжения-и-водоотведения" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Назначение </strong></p>
+<ul>
+<li>Разработка оптимальных тепловых и гидродинамических режимов</li>
+<li>Разработка оптимальных производственных и инвестиционных программ</li>
+<li>Обоснование параметров корректировки отраслевых схем</li>
+</ul>
+<p><strong>Эффект</strong>: Снижение топливно-энергетических затрат на обеспечение заданной температуры отапливаемых помещений</p>
+<p><strong>Пользователи</strong> Департамент энергетики. Теплоснабжающая и водоснабжающая организации</p>
+<p><strong>Исходные данные</strong> Часовые, суточные и месячные объемы расхода топливно-энергетических ресурсов, отпуска тепловой энергии с коллекторов, объемов общедомового потребления тепловой энергии, горячей и холодной воды, объемов подпитки холодной воды. Электронная схема теплоснабжения, водоснабжения, водоотведения.</p>
+</div>
+<div id="оценка-анализ-и-прогноз-места-и-времени-разрушения-трубопроводов" class="section level4 hasAnchor" number="1.5.3.2">
+<h4><span class="header-section-number">1.5.3.2</span> Оценка, анализ и прогноз места и времени разрушения трубопроводов<a href="index.html#оценка-анализ-и-прогноз-места-и-времени-разрушения-трубопроводов" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Назначение </strong> По-элементная оценка сроков и условий безопасной эксплуатации участков магистральных, распределительных и внутридомовых трубопроводов систем водоснабжения, водоотведения, теплоснабжения, газоснабжения</p>
+<p><strong>Эффект</strong> Снижение аварийности и удельной стоимости владения трубопроводными сетями ЖКХ</p>
+<p><strong>Пользователи</strong> Эксплуатирующие организации</p>
+<p><strong>Исходные данные</strong> доступ в колодцы и тепловые камеры, подъезды МКД для проведения инструментального контроля. Проектная, исполнительная и эксплуатационная документация. Сведения по результатам проведения организационно-технических мероприятий.</p>
+</div>
+<div id="оптимизация-расписаний-перевозки-сборных-грузов" class="section level4 hasAnchor" number="1.5.3.3">
+<h4><span class="header-section-number">1.5.3.3</span> Оптимизация расписаний перевозки сборных грузов<a href="index.html#оптимизация-расписаний-перевозки-сборных-грузов" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Назначение</strong> Оптимизация расписаний перевозки сборных грузов</p>
+<p><strong>Эффект</strong> Снижение затрат, при заданных ограничениях на время доставки</p>
+<p><strong>Пользователи</strong> Транспортная организация</p>
+<p><strong>Исходные данные</strong> ретроспективные сведения по объемам и структуре отправляемых грузов, в разрезе пунктов сбора. Стоимость подвоза и магистральной перевозки грузов</p>
+</div>
+<div id="оптимизация-работы-торгового-предприятия" class="section level4 hasAnchor" number="1.5.3.4">
+<h4><span class="header-section-number">1.5.3.4</span> Оптимизация работы торгового предприятия<a href="index.html#оптимизация-работы-торгового-предприятия" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Назначение</strong> Оперативное и стратегическое планирования развития розничной сети</p>
+<p><strong>Эффект</strong> Повышение оборачиваемости и отдачи капитала</p>
+<p><strong>Пользователи</strong> Торговая организация</p>
+<p><strong>Исходные данные</strong> ретроспективные сведения кассовым чекам, статьям выручки и затрат, сруктуре торговой сети, выкладки и ассортименту товара</p>
+<p><strong>Все права принадлежат</strong> <a href="https://www.dtwin.ru">ООО “Цифровой Двойник”</a><br />
+<strong>All rights reserved</strong> <a href="https://www.the-digital-twin.com">Digital twin LLC</a></p>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

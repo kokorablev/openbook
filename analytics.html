@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>9 Аналитические работы | Цифровой двойник города</title>
+  <meta name="description" content="Опыт создания цифровых двойников города для систем поддержки принятия решений. Первый шаг к искуственному интеллекту." />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="9 Аналитические работы | Цифровой двойник города" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Опыт создания цифровых двойников города для систем поддержки принятия решений. Первый шаг к искуственному интеллекту." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="9 Аналитические работы | Цифровой двойник города" />
+  
+  <meta name="twitter:description" content="Опыт создания цифровых двойников города для систем поддержки принятия решений. Первый шаг к искуственному интеллекту." />
+  
+
+
+
+<meta name="date" content="2024-02-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="soft.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.1/htmlwidgets.js"></script>
+<link href="libs/vis-9.1.0/vis-network.min.css" rel="stylesheet" />
+<script src="libs/vis-9.1.0/vis-network.min.js"></script>
+<script src="libs/visNetwork-binding-2.1.2/visNetwork.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+<script src="libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Открытая книга ЦД</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#ReferenceList"><i class="fa fa-check"></i><b>1.1</b> Проекты компании</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#Competence"><i class="fa fa-check"></i><b>1.2</b> Компетенции</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#Prototypes"><i class="fa fa-check"></i><b>1.3</b> Прототипы решений</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#он-лайн-платформы-оказания-услуг"><i class="fa fa-check"></i><b>1.4</b> Он-лайн платформы оказания услуг</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#MathModels"><i class="fa fa-check"></i><b>1.5</b> Разрабатываемые модели</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#макроэкономические-модели"><i class="fa fa-check"></i><b>1.5.1</b> Макроэкономические модели</a></li>
+<li class="chapter" data-level="1.5.2" data-path="index.html"><a href="index.html#межотраслевые-и-отраслевые-модели"><i class="fa fa-check"></i><b>1.5.2</b> Межотраслевые и отраслевые модели</a></li>
+<li class="chapter" data-level="1.5.3" data-path="index.html"><a href="index.html#технологические-и-технические-модели"><i class="fa fa-check"></i><b>1.5.3</b> Технологические и технические модели</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Вступление</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#авторский-коллектив"><i class="fa fa-check"></i><b>2.1</b> Авторский коллектив</a></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#печатные-публикации"><i class="fa fa-check"></i><b>2.2</b> Печатные публикации</a></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#видеоматериалы"><i class="fa fa-check"></i><b>2.3</b> Видеоматериалы</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="intro.html"><a href="intro.html#записки-прикладного-математика"><i class="fa fa-check"></i><b>2.3.1</b> Записки прикладного математика</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="concept.html"><a href="concept.html"><i class="fa fa-check"></i><b>3</b> Основные понятия</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="concept.html"><a href="concept.html#сокращения"><i class="fa fa-check"></i><b>3.1</b> Сокращения</a></li>
+<li class="chapter" data-level="3.2" data-path="concept.html"><a href="concept.html#проблемы-развития-территорий"><i class="fa fa-check"></i><b>3.2</b> Проблемы развития территорий</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="concept.html"><a href="concept.html#контекст"><i class="fa fa-check"></i><b>3.2.1</b> Контекст</a></li>
+<li class="chapter" data-level="3.2.2" data-path="concept.html"><a href="concept.html#проблемы"><i class="fa fa-check"></i><b>3.2.2</b> Проблемы</a></li>
+<li class="chapter" data-level="3.2.3" data-path="concept.html"><a href="concept.html#ключевая-причина"><i class="fa fa-check"></i><b>3.2.3</b> Ключевая причина</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="concept.html"><a href="concept.html#цели-и-задачи-цд"><i class="fa fa-check"></i><b>3.3</b> Цели и задачи ЦД</a></li>
+<li class="chapter" data-level="3.4" data-path="concept.html"><a href="concept.html#моделеоринтированная-система-управления"><i class="fa fa-check"></i><b>3.4</b> Моделеоринтированная система управления</a></li>
+<li class="chapter" data-level="3.5" data-path="concept.html"><a href="concept.html#опыт-городов-по-построению-цифровых-двойников"><i class="fa fa-check"></i><b>3.5</b> Опыт городов по построению Цифровых Двойников</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="concept.html"><a href="concept.html#межотраслевой-баланс-санкт-петербурга"><i class="fa fa-check"></i><b>3.5.1</b> Межотраслевой баланс Санкт-Петербурга</a></li>
+<li class="chapter" data-level="3.5.2" data-path="concept.html"><a href="concept.html#симулятор-большого-лондона-london-simulator"><i class="fa fa-check"></i><b>3.5.2</b> Симулятор Большого Лондона (London Simulator)</a></li>
+<li class="chapter" data-level="3.5.3" data-path="concept.html"><a href="concept.html#модель-магистральных-трубопроводов"><i class="fa fa-check"></i><b>3.5.3</b> Модель магистральных трубопроводов</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="CityDataHub.html"><a href="CityDataHub.html"><i class="fa fa-check"></i><b>4</b> Банк данных Цифрового Двойника</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="CityDataHub.html"><a href="CityDataHub.html#назначение"><i class="fa fa-check"></i><b>4.1</b> Назначение</a></li>
+<li class="chapter" data-level="4.2" data-path="CityDataHub.html"><a href="CityDataHub.html#описание-банка-данных"><i class="fa fa-check"></i><b>4.2</b> Описание банка данных</a></li>
+<li class="chapter" data-level="4.3" data-path="CityDataHub.html"><a href="CityDataHub.html#состав-наборов-данных"><i class="fa fa-check"></i><b>4.3</b> Состав наборов данных</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="CityDataHub.html"><a href="CityDataHub.html#модель-данных"><i class="fa fa-check"></i><b>4.3.1</b> Модель данных</a></li>
+<li class="chapter" data-level="4.3.2" data-path="CityDataHub.html"><a href="CityDataHub.html#MasterData"><i class="fa fa-check"></i><b>4.3.2</b> Справочные данные</a></li>
+<li class="chapter" data-level="4.3.3" data-path="CityDataHub.html"><a href="CityDataHub.html#базовые-показатели-сэр"><i class="fa fa-check"></i><b>4.3.3</b> Базовые показатели СЭР</a></li>
+<li class="chapter" data-level="4.3.4" data-path="CityDataHub.html"><a href="CityDataHub.html#матрицы-социально-экономических-связей"><i class="fa fa-check"></i><b>4.3.4</b> Матрицы социально-экономических связей</a></li>
+<li class="chapter" data-level="4.3.5" data-path="CityDataHub.html"><a href="CityDataHub.html#банк-управленческих-решений"><i class="fa fa-check"></i><b>4.3.5</b> Банк управленческих решений</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="CityDataHub.html"><a href="CityDataHub.html#услуга-по-подписке-на-наборы-данных"><i class="fa fa-check"></i><b>4.4</b> Услуга по подписке на наборы данных</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="targets.html"><a href="targets.html"><i class="fa fa-check"></i><b>5</b> Конвеер обработки</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="targets.html"><a href="targets.html#назначение-1"><i class="fa fa-check"></i><b>5.1</b> Назначение</a></li>
+<li class="chapter" data-level="5.2" data-path="targets.html"><a href="targets.html#базовая-технология"><i class="fa fa-check"></i><b>5.2</b> Базовая технология</a></li>
+<li class="chapter" data-level="5.3" data-path="targets.html"><a href="targets.html#задачи-конвеера"><i class="fa fa-check"></i><b>5.3</b> Задачи конвеера</a></li>
+<li class="chapter" data-level="5.4" data-path="targets.html"><a href="targets.html#состояние-конвеера"><i class="fa fa-check"></i><b>5.4</b> Состояние конвеера</a></li>
+<li class="chapter" data-level="5.5" data-path="targets.html"><a href="targets.html#предметный-состав-конвеера"><i class="fa fa-check"></i><b>5.5</b> Предметный состав конвеера</a></li>
+<li class="chapter" data-level="5.6" data-path="targets.html"><a href="targets.html#технические-блоки-конвеера"><i class="fa fa-check"></i><b>5.6</b> Технические блоки конвеера</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="targets.html"><a href="targets.html#блок-сбора-данных"><i class="fa fa-check"></i><b>5.6.1</b> Блок сбора данных</a></li>
+<li class="chapter" data-level="5.6.2" data-path="targets.html"><a href="targets.html#блок-нормализации-данных"><i class="fa fa-check"></i><b>5.6.2</b> Блок нормализации данных</a></li>
+<li class="chapter" data-level="5.6.3" data-path="targets.html"><a href="targets.html#блок-моделирования-и-прогнозирования"><i class="fa fa-check"></i><b>5.6.3</b> Блок моделирования и прогнозирования</a></li>
+<li class="chapter" data-level="5.6.4" data-path="targets.html"><a href="targets.html#блок-подготовки-результатов"><i class="fa fa-check"></i><b>5.6.4</b> Блок подготовки результатов</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="method.html"><a href="method.html"><i class="fa fa-check"></i><b>6</b> Методическое обеспечение</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="method.html"><a href="method.html#история-формирования-методологии"><i class="fa fa-check"></i><b>6.1</b> История формирования методологии</a></li>
+<li class="chapter" data-level="6.2" data-path="method.html"><a href="method.html#базовый-методический-подход"><i class="fa fa-check"></i><b>6.2</b> Базовый методический подход</a></li>
+<li class="chapter" data-level="6.3" data-path="method.html"><a href="method.html#внутриотраслевой-баланс"><i class="fa fa-check"></i><b>6.3</b> Внутриотраслевой баланс</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="method.html"><a href="method.html#концепция-балансовой-модели-скииэ"><i class="fa fa-check"></i><b>6.3.1</b> Концепция балансовой модели СКИиЭ</a></li>
+<li class="chapter" data-level="6.3.2" data-path="method.html"><a href="method.html#цели-воб-скииэ"><i class="fa fa-check"></i><b>6.3.2</b> Цели ВОБ СКИиЭ</a></li>
+<li class="chapter" data-level="6.3.3" data-path="method.html"><a href="method.html#задачи-воб-скииэ"><i class="fa fa-check"></i><b>6.3.3</b> Задачи ВОБ СКИиЭ</a></li>
+<li class="chapter" data-level="6.3.4" data-path="method.html"><a href="method.html#общие-принципы"><i class="fa fa-check"></i><b>6.3.4</b> Общие принципы</a></li>
+<li class="chapter" data-level="6.3.5" data-path="method.html"><a href="method.html#метод"><i class="fa fa-check"></i><b>6.3.5</b> Метод</a></li>
+<li class="chapter" data-level="6.3.6" data-path="method.html"><a href="method.html#сферы-применения"><i class="fa fa-check"></i><b>6.3.6</b> Сферы применения</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="method.html"><a href="method.html#поддержка-принятия-решений-в-управлении-транспортной-системой-региона"><i class="fa fa-check"></i><b>6.4</b> Поддержка принятия решений в управлении транспортной системой региона</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="method.html"><a href="method.html#цели-тэб"><i class="fa fa-check"></i><b>6.4.1</b> Цели ТЭБ</a></li>
+<li class="chapter" data-level="6.4.2" data-path="method.html"><a href="method.html#задачи-тэб"><i class="fa fa-check"></i><b>6.4.2</b> Задачи ТЭБ</a></li>
+<li class="chapter" data-level="6.4.3" data-path="method.html"><a href="method.html#общие-принципы-формирования-баланса"><i class="fa fa-check"></i><b>6.4.3</b> Общие принципы формирования баланса</a></li>
+<li class="chapter" data-level="6.4.4" data-path="method.html"><a href="method.html#состав-системы-показателей-баланса"><i class="fa fa-check"></i><b>6.4.4</b> Состав системы показателей баланса</a></li>
+<li class="chapter" data-level="6.4.5" data-path="method.html"><a href="method.html#базовые-технико-экономические-показатели"><i class="fa fa-check"></i><b>6.4.5</b> Базовые технико-экономические показатели</a></li>
+<li class="chapter" data-level="6.4.6" data-path="method.html"><a href="method.html#относительные-коэффициенты"><i class="fa fa-check"></i><b>6.4.6</b> Относительные коэффициенты</a></li>
+<li class="chapter" data-level="6.4.7" data-path="method.html"><a href="method.html#обобщающие-показатели-эффективности"><i class="fa fa-check"></i><b>6.4.7</b> Обобщающие показатели эффективности</a></li>
+<li class="chapter" data-level="6.4.8" data-path="method.html"><a href="method.html#не-публикуемые-разделы-методики"><i class="fa fa-check"></i><b>6.4.8</b> Не публикуемые разделы Методики</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="method.html"><a href="method.html#оценка-влияния-инвестиционных-проектов-на-развитие-города"><i class="fa fa-check"></i><b>6.5</b> Оценка влияния инвестиционных проектов на развитие города</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="method.html"><a href="method.html#назначение-методики"><i class="fa fa-check"></i><b>6.5.1</b> Назначение методики</a></li>
+<li class="chapter" data-level="6.5.2" data-path="method.html"><a href="method.html#нормативные-ссылки-и-литература"><i class="fa fa-check"></i><b>6.5.2</b> Нормативные ссылки и литература</a></li>
+<li class="chapter" data-level="6.5.3" data-path="method.html"><a href="method.html#термины-и-определения"><i class="fa fa-check"></i><b>6.5.3</b> Термины и определения</a></li>
+<li class="chapter" data-level="6.5.4" data-path="method.html"><a href="method.html#обозначения-сокращения-и-источники-данных"><i class="fa fa-check"></i><b>6.5.4</b> Обозначения, сокращения и источники данных</a></li>
+<li class="chapter" data-level="6.5.5" data-path="method.html"><a href="method.html#общие-положения"><i class="fa fa-check"></i><b>6.5.5</b> Общие положения</a></li>
+<li class="chapter" data-level="6.5.6" data-path="method.html"><a href="method.html#оценка-текущего-и-прогнозного-состояния-развития-городов"><i class="fa fa-check"></i><b>6.5.6</b> Оценка текущего и прогнозного состояния развития городов</a></li>
+<li class="chapter" data-level="6.5.7" data-path="method.html"><a href="method.html#интегральная-оценка-инвестиционного-потенциала-городов"><i class="fa fa-check"></i><b>6.5.7</b> Интегральная оценка инвестиционного потенциала городов</a></li>
+<li class="chapter" data-level="6.5.8" data-path="method.html"><a href="method.html#оценка-инвестиционной-привлекательности-целевых-направлений-отраслей-городской-экономики"><i class="fa fa-check"></i><b>6.5.8</b> Оценка инвестиционной привлекательности целевых направлений (отраслей) городской экономики</a></li>
+<li class="chapter" data-level="6.5.9" data-path="method.html"><a href="method.html#оценка-и-ранжирование-городов-для-каждого-целевого-направления-отрасли-городской-экономики"><i class="fa fa-check"></i><b>6.5.9</b> Оценка и ранжирование городов для каждого целевого направления (отрасли) городской экономики</a></li>
+<li class="chapter" data-level="6.5.10" data-path="method.html"><a href="method.html#оценка-эффективности-реализации-инвестиционного-проекта-и-его-влияния-на-прогнозные-показатели-развития-города"><i class="fa fa-check"></i><b>6.5.10</b> Оценка эффективности реализации инвестиционного проекта и его влияния на прогнозные показатели развития города</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="method.html"><a href="method.html#методика-расчета-времени-до-отказа-инженерных-систем"><i class="fa fa-check"></i><b>6.6</b> Методика расчета времени до отказа инженерных систем</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="method.html"><a href="method.html#интегральный-метод-диагностики"><i class="fa fa-check"></i><b>6.6.1</b> Интегральный метод диагностики</a></li>
+<li class="chapter" data-level="6.6.2" data-path="method.html"><a href="method.html#основные-этапы-общая-схема-проведения-работ-в-рамках-интегрального-метода-на-примере-трубопровода"><i class="fa fa-check"></i><b>6.6.2</b> Основные этапы (общая схема) проведения работ в рамках интегрального метода (на примере трубопровода)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="math.html"><a href="math.html"><i class="fa fa-check"></i><b>7</b> Математическое обеспечение</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="math.html"><a href="math.html#demography"><i class="fa fa-check"></i><b>7.1</b> Модель прогнозирования численности населения</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="math.html"><a href="math.html#назначение-2"><i class="fa fa-check"></i><b>7.1.1</b> Назначение</a></li>
+<li class="chapter" data-level="7.1.2" data-path="math.html"><a href="math.html#основные-параметры-показатели-и-обозначения"><i class="fa fa-check"></i><b>7.1.2</b> Основные параметры, показатели и обозначения</a></li>
+<li class="chapter" data-level="7.1.3" data-path="math.html"><a href="math.html#используемые-формулы-и-допущения"><i class="fa fa-check"></i><b>7.1.3</b> Используемые формулы и допущения</a></li>
+<li class="chapter" data-level="7.1.4" data-path="math.html"><a href="math.html#исходные-данные-для-модели"><i class="fa fa-check"></i><b>7.1.4</b> Исходные данные для модели</a></li>
+<li class="chapter" data-level="7.1.5" data-path="math.html"><a href="math.html#описание-итоговых-показателей-расчета"><i class="fa fa-check"></i><b>7.1.5</b> Описание итоговых показателей расчета</a></li>
+<li class="chapter" data-level="7.1.6" data-path="math.html"><a href="math.html#детальное-описание-алгоритма-произведения-расчетов"><i class="fa fa-check"></i><b>7.1.6</b> Детальное описание алгоритма произведения расчетов</a></li>
+<li class="chapter" data-level="7.1.7" data-path="math.html"><a href="math.html#область-границы-допустимого-применения-математической-модели"><i class="fa fa-check"></i><b>7.1.7</b> Область (границы) допустимого применения математической модели</a></li>
+<li class="chapter" data-level="7.1.8" data-path="math.html"><a href="math.html#оценка-точности-математических-моделей"><i class="fa fa-check"></i><b>7.1.8</b> Оценка точности математических моделей</a></li>
+<li class="chapter" data-level="7.1.9" data-path="math.html"><a href="math.html#выводы"><i class="fa fa-check"></i><b>7.1.9</b> Выводы</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="math.html"><a href="math.html#system_dyn"><i class="fa fa-check"></i><b>7.2</b> Модель системной динамики города</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="math.html"><a href="math.html#назначение-модели"><i class="fa fa-check"></i><b>7.2.1</b> Назначение модели</a></li>
+<li class="chapter" data-level="7.2.2" data-path="math.html"><a href="math.html#базовый-вид-модели"><i class="fa fa-check"></i><b>7.2.2</b> Базовый вид модели</a></li>
+<li class="chapter" data-level="7.2.3" data-path="math.html"><a href="math.html#описание-входных-переменных-модели"><i class="fa fa-check"></i><b>7.2.3</b> Описание входных переменных модели</a></li>
+<li class="chapter" data-level="7.2.4" data-path="math.html"><a href="math.html#описание-результата-модели"><i class="fa fa-check"></i><b>7.2.4</b> Описание результата модели</a></li>
+<li class="chapter" data-level="7.2.5" data-path="math.html"><a href="math.html#калибруемые-параметры-модели"><i class="fa fa-check"></i><b>7.2.5</b> Калибруемые параметры модели</a></li>
+<li class="chapter" data-level="7.2.6" data-path="math.html"><a href="math.html#калибровка-модели"><i class="fa fa-check"></i><b>7.2.6</b> Калибровка модели</a></li>
+<li class="chapter" data-level="7.2.7" data-path="math.html"><a href="math.html#результат-применения-модели"><i class="fa fa-check"></i><b>7.2.7</b> Результат применения модели</a></li>
+<li class="chapter" data-level="7.2.8" data-path="math.html"><a href="math.html#требования-к-поддержке-модели-и-регулярности-ее-рекалибровки."><i class="fa fa-check"></i><b>7.2.8</b> Требования к поддержке модели и регулярности ее рекалибровки.</a></li>
+<li class="chapter" data-level="7.2.9" data-path="math.html"><a href="math.html#допущения-необходимые-для-проведения-расчетов"><i class="fa fa-check"></i><b>7.2.9</b> Допущения, необходимые для проведения расчетов</a></li>
+<li class="chapter" data-level="7.2.10" data-path="math.html"><a href="math.html#полное-описание-алгоритма-проведения-расчетов"><i class="fa fa-check"></i><b>7.2.10</b> Полное описание алгоритма проведения расчетов</a></li>
+<li class="chapter" data-level="7.2.11" data-path="math.html"><a href="math.html#область-границы-допустимого-применения-математических-моделей"><i class="fa fa-check"></i><b>7.2.11</b> Область (границы) допустимого применения математических моделей</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="math.html"><a href="math.html#MOB_industry"><i class="fa fa-check"></i><b>7.3</b> Модель прогнозирования экономических показателей СЭР в разрезе отраслей</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="math.html"><a href="math.html#назначение-модели-1"><i class="fa fa-check"></i><b>7.3.1</b> Назначение модели</a></li>
+<li class="chapter" data-level="7.3.2" data-path="math.html"><a href="math.html#базовый-вид-модели-в-общем-виде"><i class="fa fa-check"></i><b>7.3.2</b> Базовый вид модели в общем виде</a></li>
+<li class="chapter" data-level="7.3.3" data-path="math.html"><a href="math.html#описание-входных-переменных-модели-1"><i class="fa fa-check"></i><b>7.3.3</b> Описание входных переменных модели</a></li>
+<li class="chapter" data-level="7.3.4" data-path="math.html"><a href="math.html#описание-исходных-показателей"><i class="fa fa-check"></i><b>7.3.4</b> Описание исходных показателей</a></li>
+<li class="chapter" data-level="7.3.5" data-path="math.html"><a href="math.html#особенности-таблицы-выпуска-товаров-и-услуг"><i class="fa fa-check"></i><b>7.3.5</b> Особенности таблицы выпуска товаров и услуг</a></li>
+<li class="chapter" data-level="7.3.6" data-path="math.html"><a href="math.html#описание-результата-модели-1"><i class="fa fa-check"></i><b>7.3.6</b> Описание результата модели</a></li>
+<li class="chapter" data-level="7.3.7" data-path="math.html"><a href="math.html#калибровка-модели-1"><i class="fa fa-check"></i><b>7.3.7</b> Калибровка модели</a></li>
+<li class="chapter" data-level="7.3.8" data-path="math.html"><a href="math.html#результат-применения-модели-1"><i class="fa fa-check"></i><b>7.3.8</b> Результат применения модели</a></li>
+<li class="chapter" data-level="7.3.9" data-path="math.html"><a href="math.html#требования-к-поддержке-модели-и-регулярности-ее-рекалибровки"><i class="fa fa-check"></i><b>7.3.9</b> Требования к поддержке модели и регулярности ее рекалибровки</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="math.html"><a href="math.html#fin_calc"><i class="fa fa-check"></i><b>7.4</b> Модель оценки финансовой результативности инвестиционного проекта</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="math.html"><a href="math.html#назначение-модели-2"><i class="fa fa-check"></i><b>7.4.1</b> Назначение модели</a></li>
+<li class="chapter" data-level="7.4.2" data-path="math.html"><a href="math.html#базовый-вид-модели-1"><i class="fa fa-check"></i><b>7.4.2</b> Базовый вид модели</a></li>
+<li class="chapter" data-level="7.4.3" data-path="math.html"><a href="math.html#порядок-расчета"><i class="fa fa-check"></i><b>7.4.3</b> Порядок расчета</a></li>
+<li class="chapter" data-level="7.4.4" data-path="math.html"><a href="math.html#описание-входных-переменных-модели-2"><i class="fa fa-check"></i><b>7.4.4</b> Описание входных переменных модели</a></li>
+<li class="chapter" data-level="7.4.5" data-path="math.html"><a href="math.html#fin_calc_data"><i class="fa fa-check"></i><b>7.4.5</b> Источники данных для наборов переменных</a></li>
+<li class="chapter" data-level="7.4.6" data-path="math.html"><a href="math.html#описание-результата-модели-2"><i class="fa fa-check"></i><b>7.4.6</b> Описание результата модели</a></li>
+<li class="chapter" data-level="7.4.7" data-path="math.html"><a href="math.html#калибровка-модели-2"><i class="fa fa-check"></i><b>7.4.7</b> Калибровка модели</a></li>
+<li class="chapter" data-level="7.4.8" data-path="math.html"><a href="math.html#требования-к-поддержке-модели-и-регулярности-ее-рекалибровки-1"><i class="fa fa-check"></i><b>7.4.8</b> Требования к поддержке модели и регулярности ее рекалибровки</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="math.html"><a href="math.html#project_impact"><i class="fa fa-check"></i><b>7.5</b> Модель оценки влияния инвестиционного проекта на социально-экономические показатели</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="math.html"><a href="math.html#назначение-модели-3"><i class="fa fa-check"></i><b>7.5.1</b> Назначение модели</a></li>
+<li class="chapter" data-level="7.5.2" data-path="math.html"><a href="math.html#термины-и-определения-1"><i class="fa fa-check"></i><b>7.5.2</b> Термины и определения</a></li>
+<li class="chapter" data-level="7.5.3" data-path="math.html"><a href="math.html#базовый-вид-модели-2"><i class="fa fa-check"></i><b>7.5.3</b> Базовый вид модели</a></li>
+<li class="chapter" data-level="7.5.4" data-path="math.html"><a href="math.html#мультипликативный-эффект"><i class="fa fa-check"></i><b>7.5.4</b> Мультипликативный эффект</a></li>
+<li class="chapter" data-level="7.5.5" data-path="math.html"><a href="math.html#системно-динамический-эффект"><i class="fa fa-check"></i><b>7.5.5</b> Системно-динамический эффект</a></li>
+<li class="chapter" data-level="7.5.6" data-path="math.html"><a href="math.html#расчет-эффектов-от-инвестиционных-проектов-по-целевым-показателям"><i class="fa fa-check"></i><b>7.5.6</b> Расчет эффектов от инвестиционных проектов по целевым показателям</a></li>
+<li class="chapter" data-level="7.5.7" data-path="math.html"><a href="math.html#расчет-влияния-ип-на-динамику-инвестиционных-потенциалов"><i class="fa fa-check"></i><b>7.5.7</b> Расчет влияния ИП на динамику инвестиционных потенциалов</a></li>
+<li class="chapter" data-level="7.5.8" data-path="math.html"><a href="math.html#описание-входных-переменных-модели-3"><i class="fa fa-check"></i><b>7.5.8</b> Описание входных переменных модели</a></li>
+<li class="chapter" data-level="7.5.9" data-path="math.html"><a href="math.html#описание-результата-модели-3"><i class="fa fa-check"></i><b>7.5.9</b> Описание результата модели</a></li>
+<li class="chapter" data-level="7.5.10" data-path="math.html"><a href="math.html#kalibr_project_impact"><i class="fa fa-check"></i><b>7.5.10</b> Калибровка модели</a></li>
+<li class="chapter" data-level="7.5.11" data-path="math.html"><a href="math.html#результат-применения-модели-2"><i class="fa fa-check"></i><b>7.5.11</b> Результат применения модели</a></li>
+<li class="chapter" data-level="7.5.12" data-path="math.html"><a href="math.html#требования-к-поддержке-модели-и-регулярности-ее-рекалибровки-2"><i class="fa fa-check"></i><b>7.5.12</b> Требования к поддержке модели и регулярности ее рекалибровки</a></li>
+<li class="chapter" data-level="7.5.13" data-path="math.html"><a href="math.html#развитие-модели"><i class="fa fa-check"></i><b>7.5.13</b> Развитие модели</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="math.html"><a href="math.html#portfolio"><i class="fa fa-check"></i><b>7.6</b> Модель оценки влияния портфеля инвестиционных проектов на социально-экономические показатели</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="math.html"><a href="math.html#назначение-модели-4"><i class="fa fa-check"></i><b>7.6.1</b> Назначение модели</a></li>
+<li class="chapter" data-level="7.6.2" data-path="math.html"><a href="math.html#базовый-вид-модели-3"><i class="fa fa-check"></i><b>7.6.2</b> Базовый вид модели</a></li>
+<li class="chapter" data-level="7.6.3" data-path="math.html"><a href="math.html#описание-входных-переменных-модели-4"><i class="fa fa-check"></i><b>7.6.3</b> Описание входных переменных модели</a></li>
+<li class="chapter" data-level="7.6.4" data-path="math.html"><a href="math.html#проведение-расчета-эффектов"><i class="fa fa-check"></i><b>7.6.4</b> Проведение расчета эффектов</a></li>
+<li class="chapter" data-level="7.6.5" data-path="math.html"><a href="math.html#выходные-показатели-модели"><i class="fa fa-check"></i><b>7.6.5</b> Выходные показатели модели</a></li>
+<li class="chapter" data-level="7.6.6" data-path="math.html"><a href="math.html#результат-применения-модели-3"><i class="fa fa-check"></i><b>7.6.6</b> Результат применения модели</a></li>
+<li class="chapter" data-level="7.6.7" data-path="math.html"><a href="math.html#требования-к-поддержке-модели-и-регулярности-ее-рекалибровки-3"><i class="fa fa-check"></i><b>7.6.7</b> Требования к поддержке модели и регулярности ее рекалибровки</a></li>
+<li class="chapter" data-level="7.6.8" data-path="math.html"><a href="math.html#развитие-модели-1"><i class="fa fa-check"></i><b>7.6.8</b> Развитие модели</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="math.html"><a href="math.html#ESG"><i class="fa fa-check"></i><b>7.7</b> Модель оценки влияния городских парков на показатели социально-экономического развития города и ESG (Ecology, Social, Governance)</a>
+<ul>
+<li class="chapter" data-level="7.7.1" data-path="math.html"><a href="math.html#назначение-модели-5"><i class="fa fa-check"></i><b>7.7.1</b> Назначение модели</a></li>
+<li class="chapter" data-level="7.7.2" data-path="math.html"><a href="math.html#базовый-вид-модели-4"><i class="fa fa-check"></i><b>7.7.2</b> Базовый вид модели</a></li>
+<li class="chapter" data-level="7.7.3" data-path="math.html"><a href="math.html#входные-данные"><i class="fa fa-check"></i><b>7.7.3</b> Входные данные</a></li>
+<li class="chapter" data-level="7.7.4" data-path="math.html"><a href="math.html#выходные-данные"><i class="fa fa-check"></i><b>7.7.4</b> Выходные данные</a></li>
+<li class="chapter" data-level="7.7.5" data-path="math.html"><a href="math.html#результат-применения-модели-4"><i class="fa fa-check"></i><b>7.7.5</b> Результат применения модели</a></li>
+<li class="chapter" data-level="7.7.6" data-path="math.html"><a href="math.html#требования-к-поддержке-модели-и-регулярности-рекалибровки"><i class="fa fa-check"></i><b>7.7.6</b> Требования к поддержке модели и регулярности рекалибровки</a></li>
+<li class="chapter" data-level="7.7.7" data-path="math.html"><a href="math.html#допущения-необходимые-для-проведения-расчетов-1"><i class="fa fa-check"></i><b>7.7.7</b> Допущения, необходимые для проведения расчетов</a></li>
+<li class="chapter" data-level="7.7.8" data-path="math.html"><a href="math.html#область-границы-допустимого-применения-математической-модели-1"><i class="fa fa-check"></i><b>7.7.8</b> Область (границы) допустимого применения математической модели</a></li>
+<li class="chapter" data-level="7.7.9" data-path="math.html"><a href="math.html#pril_1_ESG"><i class="fa fa-check"></i><b>7.7.9</b> Приложение 1</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="math.html"><a href="math.html#GIH"><i class="fa fa-check"></i><b>7.8</b> Модель сценарного расчета социально-экономической результативности транспортных проектов с использованием методики GIH</a>
+<ul>
+<li class="chapter" data-level="7.8.1" data-path="math.html"><a href="math.html#термины-и-определения-2"><i class="fa fa-check"></i><b>7.8.1</b> Термины и определения</a></li>
+<li class="chapter" data-level="7.8.2" data-path="math.html"><a href="math.html#назначение-модели-6"><i class="fa fa-check"></i><b>7.8.2</b> Назначение модели</a></li>
+<li class="chapter" data-level="7.8.3" data-path="math.html"><a href="math.html#входные-данные-1"><i class="fa fa-check"></i><b>7.8.3</b> Входные данные</a></li>
+<li class="chapter" data-level="7.8.4" data-path="math.html"><a href="math.html#выходные-данные-1"><i class="fa fa-check"></i><b>7.8.4</b> Выходные данные</a></li>
+<li class="chapter" data-level="7.8.5" data-path="math.html"><a href="math.html#результат-применения-модели-5"><i class="fa fa-check"></i><b>7.8.5</b> Результат применения модели</a></li>
+<li class="chapter" data-level="7.8.6" data-path="math.html"><a href="math.html#требования-к-поддержке-модели-и-регулярности-рекалибровки-1"><i class="fa fa-check"></i><b>7.8.6</b> Требования к поддержке модели и регулярности рекалибровки</a></li>
+<li class="chapter" data-level="7.8.7" data-path="math.html"><a href="math.html#допущения-необходимые-для-проведения-расчетов-2"><i class="fa fa-check"></i><b>7.8.7</b> Допущения, необходимые для проведения расчетов</a></li>
+</ul></li>
+<li class="chapter" data-level="7.9" data-path="math.html"><a href="math.html#OSEN"><i class="fa fa-check"></i><b>7.9</b> Модель оценки обеспеченности общественной инфраструктурой</a>
+<ul>
+<li class="chapter" data-level="7.9.1" data-path="math.html"><a href="math.html#назначение-модели-7"><i class="fa fa-check"></i><b>7.9.1</b> Назначение модели</a></li>
+<li class="chapter" data-level="7.9.2" data-path="math.html"><a href="math.html#термины-и-определения-3"><i class="fa fa-check"></i><b>7.9.2</b> Термины и определения</a></li>
+<li class="chapter" data-level="7.9.3" data-path="math.html"><a href="math.html#базовый-вид-модели-5"><i class="fa fa-check"></i><b>7.9.3</b> Базовый вид модели</a></li>
+<li class="chapter" data-level="7.9.4" data-path="math.html"><a href="math.html#описание-входных-переменных-модели-5"><i class="fa fa-check"></i><b>7.9.4</b> Описание входных переменных Модели</a></li>
+<li class="chapter" data-level="7.9.5" data-path="math.html"><a href="math.html#описание-результата-модели-4"><i class="fa fa-check"></i><b>7.9.5</b> Описание результата модели</a></li>
+<li class="chapter" data-level="7.9.6" data-path="math.html"><a href="math.html#калибровка-модели-3"><i class="fa fa-check"></i><b>7.9.6</b> Калибровка модели</a></li>
+<li class="chapter" data-level="7.9.7" data-path="math.html"><a href="math.html#результат-применения-модели-6"><i class="fa fa-check"></i><b>7.9.7</b> Результат применения модели</a></li>
+<li class="chapter" data-level="7.9.8" data-path="math.html"><a href="math.html#требования-к-поддержке-модели-и-регулярности-рекалибровки-2"><i class="fa fa-check"></i><b>7.9.8</b> Требования к поддержке модели и регулярности рекалибровки</a></li>
+<li class="chapter" data-level="7.9.9" data-path="math.html"><a href="math.html#допущения-необходимые-для-проведения-расчетов-3"><i class="fa fa-check"></i><b>7.9.9</b> Допущения, необходимые для проведения расчетов</a></li>
+<li class="chapter" data-level="7.9.10" data-path="math.html"><a href="math.html#описание-алгоритма-произведения-расчетов"><i class="fa fa-check"></i><b>7.9.10</b> Описание алгоритма произведения расчетов</a></li>
+<li class="chapter" data-level="7.9.11" data-path="math.html"><a href="math.html#область-границы-допустимого-применения-математической-модели-2"><i class="fa fa-check"></i><b>7.9.11</b> Область (границы) допустимого применения математической модели</a></li>
+</ul></li>
+<li class="chapter" data-level="7.10" data-path="math.html"><a href="math.html#сircular_migration"><i class="fa fa-check"></i><b>7.10</b> Модель оценки маятниковой миграции</a>
+<ul>
+<li class="chapter" data-level="7.10.1" data-path="math.html"><a href="math.html#назначение-модели-8"><i class="fa fa-check"></i><b>7.10.1</b> Назначение модели</a></li>
+<li class="chapter" data-level="7.10.2" data-path="math.html"><a href="math.html#термины-и-определения-4"><i class="fa fa-check"></i><b>7.10.2</b> Термины и определения</a></li>
+<li class="chapter" data-level="7.10.3" data-path="math.html"><a href="math.html#базовый-вид-модели-6"><i class="fa fa-check"></i><b>7.10.3</b> Базовый вид модели</a></li>
+<li class="chapter" data-level="7.10.4" data-path="math.html"><a href="math.html#описание-входных-переменных-модели-6"><i class="fa fa-check"></i><b>7.10.4</b> Описание входных переменных модели</a></li>
+<li class="chapter" data-level="7.10.5" data-path="math.html"><a href="math.html#описание-результата-модели-5"><i class="fa fa-check"></i><b>7.10.5</b> Описание результата модели</a></li>
+<li class="chapter" data-level="7.10.6" data-path="math.html"><a href="math.html#калибровка-модели-4"><i class="fa fa-check"></i><b>7.10.6</b> Калибровка модели</a></li>
+<li class="chapter" data-level="7.10.7" data-path="math.html"><a href="math.html#результат-применения-модели-7"><i class="fa fa-check"></i><b>7.10.7</b> Результат применения модели</a></li>
+<li class="chapter" data-level="7.10.8" data-path="math.html"><a href="math.html#требования-к-поддержке-модели-и-регулярности-ее-рекалибровки-4"><i class="fa fa-check"></i><b>7.10.8</b> Требования к поддержке модели и регулярности ее рекалибровки</a></li>
+</ul></li>
+<li class="chapter" data-level="7.11" data-path="math.html"><a href="math.html#Pipe"><i class="fa fa-check"></i><b>7.11</b> Модель оценки технического состояния, износа и сроков безопасной эксплуатации инфраструктуры</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="soft.html"><a href="soft.html"><i class="fa fa-check"></i><b>8</b> Программное обеспечение</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="soft.html"><a href="soft.html#программа-цифровой-двойник-города"><i class="fa fa-check"></i><b>8.1</b> Программа “Цифровой двойник города”</a></li>
+<li class="chapter" data-level="8.2" data-path="soft.html"><a href="soft.html#программа-восстановление-и-прогнозирование-межотраслевых-и-топливно-энергетических-балансов"><i class="fa fa-check"></i><b>8.2</b> Программа “Восстановление и прогнозирование межотраслевых и топливно-энергетических балансов”</a></li>
+<li class="chapter" data-level="8.3" data-path="soft.html"><a href="soft.html#программа-цифровой-двойник-трубопровода"><i class="fa fa-check"></i><b>8.3</b> Программа “Цифровой двойник трубопровода”</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="analytics.html"><a href="analytics.html"><i class="fa fa-check"></i><b>9</b> Аналитические работы</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="analytics.html"><a href="analytics.html#анализ-региональных-выбросов-о-бедном-кемерово-замолвите-слово"><i class="fa fa-check"></i><b>9.1</b> Анализ региональных выбросов: о бедном Кемерово замолвите слово</a></li>
+<li class="chapter" data-level="9.2" data-path="analytics.html"><a href="analytics.html#анализ-региональных-выбросов-взгляд-в-будущее"><i class="fa fa-check"></i><b>9.2</b> Анализ региональных выбросов: взгляд в будущее</a></li>
+<li class="chapter" data-level="9.3" data-path="analytics.html"><a href="analytics.html#ссылки-на-статьи-на-внешних-ресурсах"><i class="fa fa-check"></i><b>9.3</b> Ссылки на статьи на внешних ресурсах</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Цифровой двойник города</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="analytics" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">9</span> Аналитические работы<a href="analytics.html#analytics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="анализ-региональных-выбросов-о-бедном-кемерово-замолвите-слово" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Анализ региональных выбросов: о бедном Кемерово замолвите слово<a href="analytics.html#анализ-региональных-выбросов-о-бедном-кемерово-замолвите-слово" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><br>Топливно-энергетические балансы — кладезь информации для анализа ситуации в регионах. Выцепить можно многое: структуру потребления топливно-энергетических ресурсов; разделение на добывающих и покупателей; эффективность преобразований первичных ресурсов в электричество и тепло; энергоэффективность ТЭК, то есть долю конечного потребления в общем выпуске топлива — и так далее; вариантов — масса.</p>
+<p><br>В том числе таблицы ТЭБ позволяют оценить объёмы выбросов парниковых газов, чем мы и займёмся в этой статье.</p>
+<br>
+<details>
+<summary>
+<strong>Источники и ограничения исходных данных</strong>
+</summary>
+<strong>1)</strong> Данные имеются по всем регионам, кроме: Татарстан, Марий Эл, Челябинская область, Омская область, Магаданская область, Приморский край и Крым.
+<br><br><strong>2)</strong> Имеющиеся <strong>78</strong> таблиц распределены по годам следующим образом:
+<table class=" lightable-minimal" style="font-size: 14px; font-family: Panton; width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Год
+</th>
+<th style="text-align:right;">
+Таблицы ТЭБ
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+2020
+</td>
+<td style="text-align:right;">
+56
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2021
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2022
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2023
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2030, прогнозный
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:right;">
+78
+</td>
+</tr>
+</tbody>
+</table>
+<p>Для первичных оценок они рассматриваются как датированные одним — 2020-м — годом. Так как ТЭБы от года к году меняются не особенно сильно, подобное допущение было сочтено невеликим грехом.</p>
+<p><br><strong>3)</strong> В таблице по Санкт-Петербургу отсутствуют сведения об электрической и тепловой энергии; по Самарской области представлен только газ.</p>
+<p><br><strong>4)</strong> Данные по <a href="https://rosstat.gov.ru/storage/mediabank/Munst.htm">численности населения</a> и <a href="https://rosstat.gov.ru/statistics/accounts">ВРП</a> взяты у Росстата.</p>
+<br><strong>5)</strong> Коэффициенты перевода объёмов сжигаемого топлива в объёмы выбросов взяты из <a href="https://rulaws.ru/acts/Rasporyazhenie-Minprirody-Rossii-ot-16.04.2015-N-15-r/">Распоряжения Минприроды России от 16 апреля 2015 г. № 15-р, Приложение 2 «Таблицы к методическим рекомендациям», таблица 1.2 «Рекомендуемые значения коэффициентов пересчета в энергетические единицы и коэффициентов выбросов диоксида углерода (т CO<sub>2</sub>/ТДж), метана (кг CH<sub>4</sub>/ТДж) и оксида диазота (кг N<sub>2</sub>O/ТДж) при стационарном сжигании топлива»</a>
+</details>
+<p><br>Согласно <a href="https://edgar.jrc.ec.europa.eu/report_2022?vis=tot#emissions_table">данным EDGAR</a> суммарные выбросы CO<sub>2</sub> по России составили <strong>1 798 млн. тонн</strong>. По <a href="https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/energy-economics/statistical-review/bp-stats-review-2022-full-report.pdf">данным BP</a> — <strong>2 011 млн. тонн</strong>. Наши расчёты по 78 регионам показали <strong>1 707 млн. тонн</strong>, то есть методика расчёта даёт схожий результат.</p>
+<p><br>И половина всех выбросов приходится на 10 регионов:
+<br><br><img src="4.pic/CO2.svg" /></p>
+<p><br>Профили абсолютных и удельных значений несколько отличаются: например, Москва и Московская область в совокупности генерируют <strong>7.3%</strong> общероссийских выбросов углекислого газа, однако за счёт многочисленности населения в топ-10 по удельным показателям не попадают. По итогу лидерами (или, учитывая контекст, антилидерами) можно назвать <strong>Ямало-Ненецкий автономный округ</strong>, <strong>Ханты-Мансийский автономный округ</strong> и <strong>Кемеровскую область</strong>.</p>
+<p><br>В Ямало-Ненецком округе 140 млн. тонн выбросов CO<sub>2</sub> из 164 (то есть <strong>85%</strong>) приходятся на сжигание газа при добыче, обогащении и транспортировке. Тот же процент выбросов (65 млн. тонн из 77) приходится на газ и в Ханты-Мансийске, но при других источниках: сжигание при производстве электрической и тепловой энергии, использование в промышленности и транспорте.</p>
+<br>А вот история Кемеровской области предсказуемо иная. Главным виновником выбросов углекислого газа является <strong>уголь</strong>. 144 млн. тонн из 160, то есть <strong>91%</strong> от общих выбросов, приходятся на сжигание угля.<br />
+<br>
+<center>
+<img src="4.pic/kemer_coal_CO2.svg" style="width:60.0%" />
+</center>
+<p><br>Следующим пунктом рассмотрим выбросы метана — в его случае половина выбросов так же приходится на 10 регионов:
+<br><br><img src="4.pic/CH4.svg" /></p>
+<p><br>Здесь <strong>Кемеровская область</strong> «лидирует» и по абсолютным значениям, и по удельным. <strong>Ямало-Ненецкий автономный округ</strong> показывает сравнительно невысокие абсолютные значения, но при расчёте на человека становится вторым — <strong>Сахалинская область</strong> в абсолютном рейтинге топ-10 не фигурирует вообще, однако по удельным показателям является третьей.</p>
+<p><br><strong>Алтайский край</strong> обязан своим вторым местом внушительному потреблению угля на нетопливные нужды, а в <strong>Забайкальском крае</strong> высокие значения связаны со сжиганием прочего твёрдого топлива (торфяные брикеты и полубрикеты, дрова и т. д.).</p>
+<p><br>Выбросы от сжигания угля в Кемеровской области теперь составляют <strong>96%</strong> от общего объёма — интересно снова посмотреть на раскладку по отраслям:</p>
+<br>
+<center>
+<img src="4.pic/kemer_coal_CH4.svg" style="width:60.0%" />
+</center>
+<p><br>В отличие от выбросов CO<sub>2</sub> для метана жилой сектор, сельское/лесное/рыбное хозяйство и рыбоводство являются основным источником — объём сжигаемого этими отраслями угля является самым низким, однако именно они из-за своей специфики выделяют больше всего метана на единицу сжигаемого топлива.</p>
+<p><br>Наконец перейдём к оксиду диазота:
+<br><br><img src="4.pic/N2O.svg" /></p>
+<p><br><strong>Кемеровская область</strong> снова «лидирует» и по абсолютным значениям, и по удельным — причём ещё более выраженно. <strong>Ямало-Ненецкий автономный округ</strong> тоже повторяет самого себя: демонстрирует сравнительно невысокие абсолютные значения, но оказывается на втором месте в удельных. Далее высокие значения показывает <strong>Хабаровский край</strong>: третье место в расчёте на человека, и пятое — для абсолютных.</p>
+<p><br>Для N<sub>2</sub>O выбросы от сжигания угля в Кемеровской области составляют <strong>97%</strong> от общего объёма — раскладка по отраслям выглядит следующим образом:</p>
+<br>
+<center>
+<img src="4.pic/kemer_coal_N2O.svg" style="width:60.0%" />
+</center>
+<br>Распределение всех регионов представлено на интерактивном графике ниже — выбросы нормированы, используются логарифмические шкалы, размер кругов пропорционален численности населения региона:
+<br><br>
+<center>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-e0fb86df9e1f24541010" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-e0fb86df9e1f24541010">{"x":{"data":[{"x":[4.85038521254176,4.9732474991076],"y":[-2.66036845681359,-2.46863294039531],"text":["Республика Ингушетия <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.00219 <\/br><b>ВРП (млн. рублей): <\/b> 70 857 <\/br><b>Население: <\/b> 507 061","Республика Калмыкия <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0034 <\/br><b>ВРП (млн. рублей): <\/b> 94 026 <\/br><b>Население: <\/b> 271 135"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(70,130,180,1)","opacity":0.6,"size":[18.5735183546634,16.4050298166699],"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(70,130,180,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.07899807992085,5.15529230211234],"y":[-2.23090684211229,-2.22438625702491],"text":["Чукотский автономный округ <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.00588 <\/br><b>ВРП (млн. рублей): <\/b> 119 949 <\/br><b>Население: <\/b> 50 288","г. Севастополь <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.00597 <\/br><b>ВРП (млн. рублей): <\/b> 142 986 <\/br><b>Население: <\/b> 449 138"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(71,130,179,1)","opacity":0.6,"size":[12.1742942779864,18.1057921167492],"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(71,130,179,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.25323862970649],"y":[-2.06085871578399],"text":"Республика Северная Осетия — Алания <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.00869 <\/br><b>ВРП (млн. рублей): <\/b> 179 159 <\/br><b>Население: <\/b> 696 837","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(72,129,179,1)","opacity":0.6,"size":19.9293723477332,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(72,129,179,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.36299921138317],"y":[-2.14078586747759],"text":"Ненецкий автономный округ <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.00723 <\/br><b>ВРП (млн. рублей): <\/b> 230 674 <\/br><b>Население: <\/b> 44 111","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(72,130,179,1)","opacity":0.6,"size":11.3385826771654,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(72,130,179,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[4.80055968673369,5.43057295033554,4.97907968476046,5.15507325537306,5.42551302693211],"y":[-1.91326426738453,-1.93167155617341,-1.96904537479184,-1.92794494230479,-1.89253642269977],"text":["Еврейская автономная область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0122 <\/br><b>ВРП (млн. рублей): <\/b> 63 177 <\/br><b>Население: <\/b> 158 305","Ивановская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0117 <\/br><b>ВРП (млн. рублей): <\/b> 269 509 <\/br><b>Население: <\/b> 997 135","Карачаево-Черкесская Республика <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0107 <\/br><b>ВРП (млн. рублей): <\/b> 95 297 <\/br><b>Население: <\/b> 465 528","Республика Адыгея <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0118 <\/br><b>ВРП (млн. рублей): <\/b> 142 914 <\/br><b>Население: <\/b> 463 088","Республика Мордовия <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0128 <\/br><b>ВРП (млн. рублей): <\/b> 266 387 <\/br><b>Население: <\/b> 790 197"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(73,129,178,1)","opacity":0.6,"size":[14.9318478906694,21.7191131801331,18.2413566942436,18.2213441896449,20.523221346344],"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(73,129,178,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.38055166750999,5.45160792375957],"y":[-1.80891044928187,-1.81850648726539],"text":["Курганская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0155 <\/br><b>ВРП (млн. рублей): <\/b> 240 188 <\/br><b>Население: <\/b> 827 166","Орловская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0152 <\/br><b>ВРП (млн. рублей): <\/b> 282 884 <\/br><b>Население: <\/b> 733 498"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(74,129,177,1)","opacity":0.6,"size":[20.7480223812921,20.1673317753665],"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(74,129,177,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.25545945276245],"y":[-1.86641479979088],"text":"Кабардино-Балкарская Республика <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0136 <\/br><b>ВРП (млн. рублей): <\/b> 180 078 <\/br><b>Население: <\/b> 868 350","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(74,129,178,1)","opacity":0.6,"size":20.9922918267414,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(74,129,178,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.57548655064392,5.64243375250446],"y":[-1.72317585420726,-1.74674287555393],"text":["Тамбовская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0189 <\/br><b>ВРП (млн. рублей): <\/b> 376 259 <\/br><b>Население: <\/b> 1 006 748","Ульяновская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0179 <\/br><b>ВРП (млн. рублей): <\/b> 438 969 <\/br><b>Население: <\/b> 1 229 824"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(75,128,177,1)","opacity":0.6,"size":[21.7713351936431,22.9172192029983],"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(75,128,177,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[4.79831080999929],"y":[-1.76025237543262],"text":"Республика Алтай  <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0174 <\/br><b>ВРП (млн. рублей): <\/b> 62 851 <\/br><b>Население: <\/b> 220 181","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(75,129,177,1)","opacity":0.6,"size":15.800384866555,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(75,129,177,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.40118195983115,5.53913433553526],"y":[-1.66453271453428,-1.62767279786969],"text":["Чеченская Республика <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0217 <\/br><b>ВРП (млн. рублей): <\/b> 251 873 <\/br><b>Население: <\/b> 1 478 726","Чувашская Республика — Чувашия <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0236 <\/br><b>ВРП (млн. рублей): <\/b> 346 046 <\/br><b>Население: <\/b> 1 217 818"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(76,128,176,1)","opacity":0.6,"size":[24.0746490546769,22.8584500070737],"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(76,128,176,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.61718849463274,5.47192127496372],"y":[-1.58673898166514,-1.59349903687671],"text":["Брянская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0259 <\/br><b>ВРП (млн. рублей): <\/b> 414 179 <\/br><b>Население: <\/b> 1 192 491","Камчатский край <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0255 <\/br><b>ВРП (млн. рублей): <\/b> 296 429 <\/br><b>Население: <\/b> 313 016"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(77,128,175,1)","opacity":0.6,"size":[22.7334806321641,16.8525865767748],"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(77,128,175,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.71850210406256,5.90224777962063,5.6855495319608,5.86970027017253,5.50893836945591],"y":[-1.5998891459506,-1.59716979705605,-1.61785443889973,-1.60633848116085,-1.60482675859908],"text":["Курская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0251 <\/br><b>ВРП (млн. рублей): <\/b> 523 000 <\/br><b>Население: <\/b> 1 104 008","Мурманская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0253 <\/br><b>ВРП (млн. рублей): <\/b> 798 450 <\/br><b>Население: <\/b> 741 404","Пензенская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0241 <\/br><b>ВРП (млн. рублей): <\/b> 484 785 <\/br><b>Население: <\/b> 1 305 563","Республика Дагестан <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0248 <\/br><b>ВРП (млн. рублей): <\/b> 740 799 <\/br><b>Население: <\/b> 3 110 858","Республика Карелия <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0248 <\/br><b>ВРП (млн. рублей): <\/b> 322 804 <\/br><b>Население: <\/b> 614 064"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(77,128,176,1)","opacity":0.6,"size":[22.2856921619214,20.2178122094858,23.2812956563542,29.9597372297424,19.3662090695131],"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(77,128,176,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.72204969978685,5.74965578588803,5.44667585199954,5.66390304666923],"y":[-1.55805132055696,-1.54209072808775,-1.51604292381438,-1.54401882406034],"text":["Астраханская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0277 <\/br><b>ВРП (млн. рублей): <\/b> 527 290 <\/br><b>Население: <\/b> 1 005 782","Калужская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0287 <\/br><b>ВРП (млн. рублей): <\/b> 561 896 <\/br><b>Население: <\/b> 1 002 575","Новгородская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0305 <\/br><b>ВРП (млн. рублей): <\/b> 279 689 <\/br><b>Население: <\/b> 596 508","Рязанская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0286 <\/br><b>ВРП (млн. рублей): <\/b> 461 215 <\/br><b>Население: <\/b> 1 108 847"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(78,127,175,1)","opacity":0.6,"size":[21.7660992799436,21.7486978129661,19.2416064039618,22.3106534259847],"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(78,127,175,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.74279769090319,5.30987300638528,6.1330117190625,5.93273532802643],"y":[-1.459989775069,-1.49451629450169,-1.4860921002567,-1.47160473597442],"text":["Владимирская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0347 <\/br><b>ВРП (млн. рублей): <\/b> 553 092 <\/br><b>Население: <\/b> 1 358 416","Костромская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.032 <\/br><b>ВРП (млн. рублей): <\/b> 204 114 <\/br><b>Население: <\/b> 633 385","Новосибирская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0327 <\/br><b>ВРП (млн. рублей): <\/b> 1 358 350 <\/br><b>Население: <\/b> 2 798 170","Саратовская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0338 <\/br><b>ВРП (млн. рублей): <\/b> 856 516 <\/br><b>Население: <\/b> 2 421 895"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(79,127,174,1)","opacity":0.6,"size":[23.5289196321221,19.5011404833385,28.9849067234382,27.7351837448488],"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(79,127,174,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.65255333380653,5.7398184540161,4.91503451540686],"y":[-1.41827826075685,-1.41667176288626,-1.42290852178892],"text":["Амурская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0382 <\/br><b>ВРП (млн. рублей): <\/b> 449 318 <\/br><b>Население: <\/b> 790 044","Калининградская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0383 <\/br><b>ВРП (млн. рублей): <\/b> 549 311 <\/br><b>Население: <\/b> 1 012 512","Республика Тыва (Тува) <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0378 <\/br><b>ВРП (млн. рублей): <\/b> 82 231 <\/br><b>Население: <\/b> 327 383"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(80,126,173,1)","opacity":0.6,"size":[20.5222795502458,21.8025227737205,16.9979704811842],"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(80,126,173,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.59873230521492],"y":[-1.37944669820254],"text":"Кировская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0417 <\/br><b>ВРП (млн. рублей): <\/b> 396 947 <\/br><b>Население: <\/b> 1 262 402","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(81,126,172,1)","opacity":0.6,"size":23.0752055031188,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(81,126,172,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[6.01983396618334,5.30482796582144],"y":[-1.31362468684634,-1.30597529492416],"text":["Оренбургская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0486 <\/br><b>ВРП (млн. рублей): <\/b> 1 046 728 <\/br><b>Население: <\/b> 1 956 835","Псковская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0494 <\/br><b>ВРП (млн. рублей): <\/b> 201 757 <\/br><b>Население: <\/b> 626 115"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(83,125,171,1)","opacity":0.6,"size":[26.0445563368632,19.4506326031487],"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(83,125,171,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.99883927486261],"y":[-1.25215913463908],"text":"Белгородская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.056 <\/br><b>ВРП (млн. рублей): <\/b> 997 331 <\/br><b>Население: <\/b> 1 549 151","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(85,125,170,1)","opacity":0.6,"size":24.3835096253223,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(85,125,170,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[6.05449362630365,5.85315677024349],"y":[-1.21952762056897,-1.21297931280303],"text":["Республика Саха (Якутия) <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0603 <\/br><b>ВРП (млн. рублей): <\/b> 1 133 688 <\/br><b>Население: <\/b> 971 996","Тульская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0612 <\/br><b>ВРП (млн. рублей): <\/b> 713 110 <\/br><b>Население: <\/b> 1 466 127"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(86,124,169,1)","opacity":0.6,"size":[21.5812886768211,24.0186007227648],"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(86,124,169,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[6.20421046934134,5.56235009236957],"y":[-1.17022108386999,-1.1689104818866],"text":["Нижегородская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0676 <\/br><b>ВРП (млн. рублей): <\/b> 1 600 333 <\/br><b>Население: <\/b> 3 202 946","Смоленская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0678 <\/br><b>ВРП (млн. рублей): <\/b> 365 048 <\/br><b>Население: <\/b> 934 889"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(87,124,167,1)","opacity":0.6,"size":[30.2372465497266,21.3743913097089],"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(87,124,167,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.42522958586831,5.83532941804333],"y":[-1.18848064283342,-1.1868229032017],"text":["Республика Хакасия(6) <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0648 <\/br><b>ВРП (млн. рублей): <\/b> 266 213 <\/br><b>Население: <\/b> 534 262","Удмуртская Республика <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.065 <\/br><b>ВРП (млн. рублей): <\/b> 684 431 <\/br><b>Население: <\/b> 1 500 955"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(87,124,168,1)","opacity":0.6,"size":[18.7830319793167,24.1729408454326],"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(87,124,168,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[6.21097676759151],"y":[-1.16204884367116],"text":"Самарская область (только газ) <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0689 <\/br><b>ВРП (млн. рублей): <\/b> 1 625 462 <\/br><b>Население: <\/b> 3 179 532","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(88,123,167,1)","opacity":0.6,"size":30.1670756902008,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(88,123,167,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[6.09294555658997,5.48115644453239],"y":[-1.1157136424214,-1.13227314102178],"text":["Ленинградская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0766 <\/br><b>ВРП (млн. рублей): <\/b> 1 238 641 <\/br><b>Население: <\/b> 1 875 872","Республика Бурятия(5) <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0737 <\/br><b>ВРП (млн. рублей): <\/b> 302 800 <\/br><b>Население: <\/b> 985 937"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(89,123,166,1)","opacity":0.6,"size":[25.7299492069277,21.6579475332157],"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(89,123,166,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.74289127802291],"y":[-1.08652845507131],"text":"Томская область (утвержд. с 2022, 2020 взят из материалов) <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0819 <\/br><b>ВРП (млн. рублей): <\/b> 553 212 <\/br><b>Население: <\/b> 1 079 271","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(90,122,165,1)","opacity":0.6,"size":22.1571903331369,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(90,122,165,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[6.02643740682812],"y":[-1.06195331564395],"text":"Воронежская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0867 <\/br><b>ВРП (млн. рублей): <\/b> 1 062 765 <\/br><b>Население: <\/b> 2 324 205","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(91,122,164,1)","opacity":0.6,"size":27.3948284036658,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(91,122,164,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.89310622057933,6.23415691764676,5.92782705606826],"y":[-1.02447392972532,-1.02221269551679,-1.01170517064973],"text":["Архангельская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0945 <\/br><b>ВРП (млн. рублей): <\/b> 781 819 <\/br><b>Население: <\/b> 1 136 535","Ростовская область   <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.095 <\/br><b>ВРП (млн. рублей): <\/b> 1 714 577 <\/br><b>Население: <\/b> 4 197 821","Ставропольский край <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0973 <\/br><b>ВРП (млн. рублей): <\/b> 846 890 <\/br><b>Население: <\/b> 2 803 573"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(93,121,162,1)","opacity":0.6,"size":[22.4523998082711,33.0099202010323,29.0022078002967],"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(93,121,162,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.7911803515034],"y":[-0.986616387311971],"text":"Липецкая область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.103 <\/br><b>ВРП (млн. рублей): <\/b> 618 273 <\/br><b>Население: <\/b> 1 139 371","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(94,120,161,1)","opacity":0.6,"size":22.4668165346138,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(94,120,161,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.68717130133669],"y":[-1.00850565582462],"text":"Тверская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.0981 <\/br><b>ВРП (млн. рублей): <\/b> 486 599 <\/br><b>Население: <\/b> 1 260 379","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(94,121,161,1)","opacity":0.6,"size":23.0654569895472,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(94,121,161,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[6.72693561221896],"y":[-0.981517162000432],"text":"г. Санкт-Петербург (не соответствует форме) <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.104 <\/br><b>ВРП (млн. рублей): <\/b> 5 332 558 <\/br><b>Население: <\/b> 5 398 064","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(95,120,160,1)","opacity":0.6,"size":35.9425367308789,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(95,120,160,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.78764952504086],"y":[-0.918176872377567],"text":"Республика Коми <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.121 <\/br><b>ВРП (млн. рублей): <\/b> 613 267 <\/br><b>Население: <\/b> 820 473","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(98,118,157,1)","opacity":0.6,"size":20.7077234689163,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(98,118,157,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[6.1415602927699,5.78657291314026],"y":[-0.851861814523201,-0.846451824876337],"text":["Пермский край <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.141 <\/br><b>ВРП (млн. рублей): <\/b> 1 385 352 <\/br><b>Население: <\/b> 2 599 260","Ярославская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.142 <\/br><b>ВРП (млн. рублей): <\/b> 611 748 <\/br><b>Население: <\/b> 1 253 389"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(101,116,153,1)","opacity":0.6,"size":[28.3357185214686,23.0317107409703],"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(101,116,153,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[6.86216690887524],"y":[-0.837300349618895],"text":"Тюменская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.145 <\/br><b>ВРП (млн. рублей): <\/b> 7 280 596 <\/br><b>Население: <\/b> 3 756 536","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(102,116,152,1)","opacity":0.6,"size":31.8264368580265,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(102,116,152,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[6.00073307804091],"y":[-0.84136183420534],"text":"Сахалинская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.144 <\/br><b>ВРП (млн. рублей): <\/b> 1 001 689 <\/br><b>Население: <\/b> 488 257","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(102,116,153,1)","opacity":0.6,"size":18.4250617303041,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(102,116,153,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[6.73288218699585],"y":[-0.805912448489107],"text":"Московская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.156 <\/br><b>ВРП (млн. рублей): <\/b> 5 406 076 <\/br><b>Население: <\/b> 7 690 863","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(103,115,150,1)","opacity":0.6,"size":40.7425636343055,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(103,115,150,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.62606769270295,6.42606017420545],"y":[-0.810532448935241,-0.807173312302982],"text":["Забайкальский край <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.155 <\/br><b>ВРП (млн. рублей): <\/b> 422 734 <\/br><b>Население: <\/b> 1 059 700","Краснодарский край <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.156 <\/br><b>ВРП (млн. рублей): <\/b> 2 667 228 <\/br><b>Население: <\/b> 5 675 462"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(103,115,151,1)","opacity":0.6,"size":[22.0544326415629,36.5718755809213],"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(103,115,151,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.93293257556235],"y":[-0.790215453279769],"text":"Хабаровский край <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.162 <\/br><b>ВРП (млн. рублей): <\/b> 856 905 <\/br><b>Население: <\/b> 1 315 643","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(104,114,149,1)","opacity":0.6,"size":23.3289165784911,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(104,114,149,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.79548869811656],"y":[-0.751053019069167],"text":"Вологодская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.177 <\/br><b>ВРП (млн. рублей): <\/b> 624 437 <\/br><b>Население: <\/b> 1 160 445","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(106,113,146,1)","opacity":0.6,"size":22.5733661376133,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(106,113,146,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.99020903551246],"y":[-0.730118309312069],"text":"Волгоградская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.186 <\/br><b>ВРП (млн. рублей): <\/b> 977 708 <\/br><b>Население: <\/b> 2 491 036","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(108,112,145,1)","opacity":0.6,"size":27.9718650068405,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(108,112,145,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[6.17444552724934],"y":[-0.638409554044017],"text":"Иркутская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.23 <\/br><b>ВРП (млн. рублей): <\/b> 1 494 327 <\/br><b>Население: <\/b> 2 391 193","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(113,107,137,1)","opacity":0.6,"size":27.6289831758029,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(113,107,137,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[6.22896203707535],"y":[-0.618070857670022],"text":"Республика Башкортостан <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.241 <\/br><b>ВРП (млн. рублей): <\/b> 1 694 190 <\/br><b>Население: <\/b> 4 038 151","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(114,106,135,1)","opacity":0.6,"size":32.5893117822148,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(114,106,135,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[6.5239846133291],"y":[-0.625658539456765],"text":"Ханты-Мансийский автономный округ — Югра  <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.237 <\/br><b>ВРП (млн. рублей): <\/b> 3 341 832 <\/br><b>Население: <\/b> 1 674 676","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(114,107,135,1)","opacity":0.6,"size":24.9166103085263,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(114,107,135,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[7.30665482540871],"y":[-0.569692402982141],"text":"г. Москва  <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.269 <\/br><b>ВРП (млн. рублей): <\/b> 20 260 718 <\/br><b>Население: <\/b> 12 678 079","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(117,103,129,1)","opacity":0.6,"size":49.1338582677165,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(117,103,129,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[6.4353819178168],"y":[-0.54232907343125],"text":"Красноярский край  <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.287 <\/br><b>ВРП (млн. рублей): <\/b> 2 725 097 <\/br><b>Население: <\/b> 2 866 255","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(119,102,126,1)","opacity":0.6,"size":29.2016985377146,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(119,102,126,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5.82225257543548],"y":[-0.51732417124607],"text":"Алтайский край <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.304 <\/br><b>ВРП (млн. рублей): <\/b> 664 129 <\/br><b>Население: <\/b> 2 317 153","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(121,100,123,1)","opacity":0.6,"size":27.3699793556751,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(121,100,123,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[6.40013284461426],"y":[-0.502383554730735],"text":"Свердловская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.314 <\/br><b>ВРП (млн. рублей): <\/b> 2 512 655 <\/br><b>Население: <\/b> 4 310 681","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(122,99,121,1)","opacity":0.6,"size":33.3023618101248,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(122,99,121,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[6.44212442728934],"y":[-0.353950571750807],"text":"Ямало-Ненецкий автономный округ <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.443 <\/br><b>ВРП (млн. рублей): <\/b> 2 767 734 <\/br><b>Население: <\/b> 544 444","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(130,86,98,1)","opacity":0.6,"size":18.8599570191408,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(130,86,98,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[6.01914833147041],"y":[-0.00420064484558015],"text":"Кемеровская область <\/br><\/br><\/br><b>Выбросы (норм): <\/b> 0.99 <\/br><b>ВРП (млн. рублей): <\/b> 1 045 077 <\/br><b>Население: <\/b> 2 657 854","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(139,0,0,1)","opacity":0.6,"size":28.5295007858257,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(139,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":26.2283105022831,"r":7.30593607305936,"b":49.7467828974678,"l":64.0929846409299},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"Panton","size":18.5969281859693},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[4.67289360922882,7.43207202617918],"tickmode":"array","ticktext":["100 000","1 000 000","10 000 000"],"tickvals":[5,6,7],"categoryorder":"array","categoryarray":["100 000","1 000 000","10 000 000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"Panton","size":17.2685761726858},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"<b> ВРП (млн. рублей) <\/b>","font":{"color":"rgba(0,0,0,1)","family":"Panton","size":18.5969281859693}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-2.79317684741199,0.12860774575282],"tickmode":"array","ticktext":["0.01","0.10","1.00"],"tickvals":[-2,-1,0],"categoryorder":"array","categoryarray":["0.01","0.10","1.00"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"Panton","size":17.2685761726858},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"<b> Выбросы (норм) <\/b>","font":{"color":"rgba(0,0,0,1)","family":"Panton","size":18.5969281859693}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"Panton","size":14.8775425487754}},"hovermode":"closest","barmode":"relative","hoverlabel":{"font":{"family":"Panton","size":16}}},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"b284e5570403":{"x":{},"y":{},"size":{},"text":{},"colour":{},"type":"scatter"}},"cur_data":"b284e5570403","visdat":{"b284e5570403":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</center>
+<p><br>Москва выделяется численностью населения и ВРП… а Кемеровская область — своими выбросами. Экологическая ситуация выглядит катастрофической при том, что, по нашим оценкам, перевод региона на газ или тепловую энергию положительно скажется не только на качестве жизни и здоровье людей, но и на экономике.</p>
+<p><br>Газ дороже, но одновременно энергоэффективнее, то есть его требуется меньше — при замене угля на газ в конечном потреблении населения совокупная стоимость топливно-энергетических ресурсов снизится на <strong>350 млн. рублей в год</strong>. Газификация сферы услуг сэкономит <strong>40 млн. рублей в год</strong>, газификация промышленности на четверть (то есть с заменой четверти потребления угля на газ; так как полностью избавиться от использования угля невозможно, некоторые производственные процессы его требуют, для оценки была взята четверть) — <strong>1.4 млрд. рублей в год</strong>.</p>
+<p><br>Замена половины потребления угля на нетопливные нужды газом сэкономит <strong>4.5 млрд. рублей в год</strong>; выбросы углекислого газа при этом снизятся на <strong>10.6%</strong>, метана — на <strong>9.6%</strong>, а оксида диазота — на <strong>21%</strong>.</p>
+<p><br>Выигрыш, так сказать, со всех сторон.</p>
+</div>
+<div id="анализ-региональных-выбросов-взгляд-в-будущее" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Анализ региональных выбросов: взгляд в будущее<a href="analytics.html#анализ-региональных-выбросов-взгляд-в-будущее" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><br><a href="https://openbook.dtwin.ru/analytics.html#%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7-%D1%80%D0%B5%D0%B3%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85-%D0%B2%D1%8B%D0%B1%D1%80%D0%BE%D1%81%D0%BE%D0%B2-%D0%BE-%D0%B1%D0%B5%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BA%D0%B5%D0%BC%D0%B5%D1%80%D0%BE%D0%B2%D0%BE-%D0%B7%D0%B0%D0%BC%D0%BE%D0%BB%D0%B2%D0%B8%D1%82%D0%B5-%D1%81%D0%BB%D0%BE%D0%B2%D0%BE">В предыдущей статье</a> мы рассмотрели региональные выбросы парниковых газов на фактических данных за 2020-й год — интересно попробовать заглянуть в будущее и оценить, насколько в перспективе ситуация изменится. Возьмём прогнозы региональных топливно-энергетических балансов до 2030-го года и рассчитаем выбросы в этот период.</p>
+<br>
+<details>
+<summary>
+<strong>Источники данных для прогнозирования</strong>
+</summary>
+<p>В основу модели легли социально-экономические данные регионов. Взят «инерционный сценарий», то есть предположение, что сохраняются текущие тенденции и технологии.</p>
+<p><br><strong>1)</strong> Данные по <a href="https://rosstat.gov.ru/storage/mediabank/Munst.htm">численности населения</a>, <a href="https://rosstat.gov.ru/storage/mediabank/Munst.htm">доходам населения</a> и <a href="https://rosstat.gov.ru/statistics/accounts">ВРП</a> взяты из Росстата.</p>
+<p><br><strong>2)</strong> Ретроспективные <a href="https://rosstat.gov.ru/storage/mediabank/Balans_energo_2005-2021.xlsx">таблицы ТЭБ по России в целом</a> также взяты из Росстата.</p>
+<p><br><strong>3)</strong> Данные по выручке предприятий и организаций взяты из бухгалтерских балансов ФНС.</p>
+<br><strong>4)</strong> Региональные таблицы ТЭБ имеют ограничения, описанные в <a href="https://openbook.dtwin.ru/analytics.html#%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7-%D1%80%D0%B5%D0%B3%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85-%D0%B2%D1%8B%D0%B1%D1%80%D0%BE%D1%81%D0%BE%D0%B2-%D0%BE-%D0%B1%D0%B5%D0%B4%D0%BD%D0%BE%D0%BC-%D0%BA%D0%B5%D0%BC%D0%B5%D1%80%D0%BE%D0%B2%D0%BE-%D0%B7%D0%B0%D0%BC%D0%BE%D0%BB%D0%B2%D0%B8%D1%82%D0%B5-%D1%81%D0%BB%D0%BE%D0%B2%D0%BE">предыдущем исследовании</a>, в разделе «Источники и ограничения исходных данных».
+</details>
+<br>И начнём мы с того, что заглянем в конец: сравним топ-10 регионов по выбросам углекислого газа за 2020-й год с топ-10 регионами в 2030-м — графики с фактическими данными за 2020-й для удобства перекопируем из прошлого исследования.
+<br><br><img src="4.pic/CO2.svg" />
+<center>
+<font size="2" color="grey" face="Panton">Выбросы углекислого газа: 2020 год</font>
+</center>
+<br><img src="4.pic/CO2_2030.svg" />
+<center>
+<font size="2" color="grey" face="Panton">Выбросы углекислого газа: 2030 год</font>
+</center>
+<p><br>Лица всё те же, однако порядок несколько поменяется — любопытны удельные выбросы: у многих регионов они меняются «в пределах погрешности», и ярко выделяется «лидер» <strong>Ямало-Ненецкий автономный округ</strong> с относительным увеличением на целых <strong>20.3%</strong>. Связано это с тем, что, по нашим прогнозам, добыча (как следствие, и транспортировка, и потери) являющегося главным виновником выбросов газа будет только увеличиваться — в то время как численность населения будет падать. Сложившись вместе, эти процессы дадут заметное изменение в удельном показателе.</p>
+<p><br>Похожим образом обстоят дела и в <strong>Хабаровском крае</strong>: увеличение добычи и обогащения угля вкупе с уменьшением населения выльется в повышение удельных выбросов на <strong>9.2%</strong>; а вот рост на <strong>10.7%</strong> в <strong>Ненецком автономном округе</strong> будет вызван исключительно падением численности населения — добыча газа и использование топливно-энергетических ресурсов в целом будут только сокращаться.</p>
+<p><br>Любопытно глянуть и на абсолютные значения в динамике — посмотрим, как будут двигаться наши «лидеры» в период 2020-2030 гг. (шкала <em>Y</em>, то есть значения выбросов, логарифмирована).
+<br><br><img src="4.pic/CO2_lin_1500x600.svg" /></p>
+<p><br>Условно регионы можно разделить на три группы:</p>
+<p><br><strong>а)</strong> <strong>Ямало-Ненецкий автономный округ</strong> и <strong>Кемеровская область</strong>, чьё первенство в объёмах выбросов углекислого газа неоспоримо, <strong>18.7%</strong> всех выбросов России;</p>
+<p><br><strong>б)</strong> <strong>Москва</strong>, <strong>Ханты-Мансийский автономный округ</strong> и <strong>Свердловская область</strong> — вторая выделяющаяся группа, в сумме дающая <strong>14.3%</strong> всех выбросов;</p>
+<p><br><strong>в)</strong> <strong>Московская область</strong>, <strong>Красноярский край</strong>, <strong>Республика Башкортостан</strong>, <strong>Краснодарский край</strong>, <strong>Иркутская область</strong> — так сказать, «лучшие из худших»: нижняя часть списка, в сумме дающая <strong>16%</strong> всех выбросов; больше, чем вторая группа, однако делят они это число на пятерых.</p>
+<p><br>И интересно здесь следующее. Во второй и третьей группе на первые места постепенно вырываются и к 2030-му году вырвутся <strong>Москва</strong> и <strong>Московская область</strong> соответственно.</p>
+<p><br><strong>Москва</strong> вырастет с <strong>74 637 489 тонн</strong> до <strong>86 382 482 тонн</strong>, то есть на <strong>15.7%</strong> — и займёт в «антирейтинге» почётное третье место. <strong>Московская область</strong> — с <strong>48 692 039 тонн</strong> до <strong>62 201 809 тонн</strong>, на <strong>27.7%</strong>.</p>
+<br>И суммарно «Московская агломерация» в 2030-м году даст <strong>148 584 291 тонн</strong> выбросов CO<sub>2</sub>, что почти равно значению второй в «антирейтинге» <strong>Кемеровской области</strong>.
+<br><br>
+<center>
+<img src="4.pic/CO2_Mos_lin.svg" style="width:70.0%" />
+</center>
+<br><br>Перейдём к метану — так же сравним топ-10 регионов по выбросам за 2020-й год с топ-10 регионами в 2030-м.
+<br><br><img src="4.pic/CH4.svg" />
+<center>
+<font size="2" color="grey" face="Panton">Выбросы метана: 2020 год</font>
+</center>
+<br><img src="4.pic/CH4_2030.svg" />
+<center>
+<font size="2" color="grey" face="Panton">Выбросы метана: 2030 год</font>
+</center>
+<p><br>В удельных показателях <strong>Ямало-Ненецкий автономный округ</strong> вырастет на <strong>16.2%</strong> и вырвется на первое место, обогнав <strong>Кемеровскую область</strong>, где удельное значение по сути не изменится. Связано это с тем, что хоть добыча угля в Кемеровской области, по нашим прогнозам, и будет расти, увеличиваться будет <em>экспорт</em>, а не конечное потребление или использование для преобразований (то есть использование для генерации электричества и тепла, обогащения угля, переработки газа и т.д.) — население будет падать вместе с конечным потреблением и преобразованиями, удельное значение, как следствие, не изменится. А вот в Ямало-Ненецком автономном округе, как уже говорилось, история иная: будет увеличиваться добыча газа, его <em>переработка</em> и сжигание при транспортировке — население вместе с конечным потреблением будет уменьшаться, но удельных выбросов на итог станет больше.</p>
+<p><br>Посмотрим на динамику абсолютных значений по времени в период 2020-2030 гг. (шкала <em>Y</em>, то есть значения выбросов, снова логарифмирована):
+<br><br><img src="4.pic/CH4_lin_1500x600.svg" /></p>
+<p><br>Каких-либо любопытных сильных изменений не наблюдается: на <strong>17.4%</strong> вырастет <strong>Москва</strong>, на <strong>13.7%</strong> уменьшит выбросы метана <strong>Забайкальский край</strong>; на <strong>16.8%</strong> сократит их <strong>Алтайский край</strong> (в первую очередь за счёт снижения потребления угля) — и на этом заметные отличия заканчиваются.</p>
+<p><br>«Московская агломерация» в 2030-м суммарно даст <strong>9501 тонн</strong> выбросов метана, то есть если рассматривать Москву и Московскую область вместе, в рейтинге они занимают третье место, ненамного уступая <strong>Алтайскому краю</strong>.</p>
+<br>Наконец перейдём к оксиду диазота — снова начнём со сравнения «лидеров» в 2020-м и 2030-м годах.
+<br><br><img src="4.pic/N2O.svg" />
+<center>
+<font size="2" color="grey" face="Panton">Выбросы оксида диазота: 2020 год</font>
+</center>
+<br><img src="4.pic/N2O_2030.svg" />
+<center>
+<font size="2" color="grey" face="Panton">Выбросы оксида диазота: 2030 год</font>
+</center>
+<p><br>В удельных показателях картина практически не поменяется: только Республика Коми поднимется на одно место, а место Забайкальского края займёт Бурятия. Значения изменятся в основном «в пределах погрешности» — за исключением <strong>Ямало-Ненецкого автономного округа</strong> с его увеличением на <strong>18.2%</strong> по уже описанным причинам.</p>
+<p><br>Рассмотрим динамику абсолютных значений выбросов оксида диазота за 2020-2030 гг. (шкала <em>Y</em>, то есть значения выбросов, логарифмирована):
+<br><br><img src="4.pic/N2O_lin_1500x600.svg" /></p>
+<p><br>В целом особых изменений не произойдёт, но заметно сокращение выбросов на <strong>14%</strong> в <strong>Алтайском крае</strong> и увеличение на <strong>14.6%</strong> — в <strong>Москве</strong>.</p>
+<p><br>«Московская агломерация» суммарно даст <strong>577 тонн</strong> выбросов оксида диазота, что обеспечивает ей четвёртое место.</p>
+<br>
+<center>
+<strong>Основные выводы</strong>
+</center>
+<p><br>При сохранении имеющихся тенденций к 2030-му году <strong>Кемеровская область</strong> и <strong>Ямало-Ненецкий автономный округ</strong> останутся лидерами по удельным значениям выбросов парниковых газов. <strong>Кемеровская область</strong> останется на первом месте (причём с большим отрывом от остальных) и по абсолютным значениям выбросов метана и оксида диазота — в случае углекислого газа <strong>Ямало-Ненецкий автономный округ</strong> и <strong>Кемеровская область</strong> останутся на первом и втором месте соответственно.</p>
+<p><br>Стоит отметить, что абсолютные значения выбросов в <strong>Кемеровской области</strong> всех трёх газов снизятся, однако совершенно недостаточно для того, чтобы поменять расклад «лидеров» — и так как одновременно с этим снизится и численность населения, удельные значения останутся практически неизменными. А вот в <strong>Ямало-Ненецком автономном округе</strong> абсолютные значения, наоборот, возрастут, что вкупе со снижением численности населения приведёт к заметному увеличению удельных показателей.</p>
+<p><br>Увеличатся выбросы парниковых газов в <strong>Красноярском крае</strong> и снизятся — в <strong>Алтайском</strong>, однако недостаточно для того, чтобы Алтайский край перестал занимать по метану второе место.</p>
+<p><br>Наконец, значительно повысятся выбросы в <strong>Москве</strong>: увеличится население, увеличится генерация электрической и тепловой энергии, увеличится количество машин и общее конечное потребление — из-за высокой численности населения ни Москва, ни Московская область в лидерах по удельным показателям не фигурируют, однако вместе к 2030-му году по абсолютным значениям приблизятся к Кемеровской области в разрезе углекислого газа и к Алтайскому краю — по метану.</p>
+</div>
+<div id="ссылки-на-статьи-на-внешних-ресурсах" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Ссылки на статьи на внешних ресурсах<a href="analytics.html#ссылки-на-статьи-на-внешних-ресурсах" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><a href="https://telegra.ph/Matematicheskie-osnovaniya-gradostroitelnogo-planirovaniya-07-07">Математические основы градостроительного планирования</a><br />
+</li>
+<li><a href="https://secrets.tinkoff.ru/razvitie/digital-twin/">Что такое цифровые двойники и где их используют. Журнал Тинькофф</a><br />
+</li>
+<li><a href="https://telegra.ph/EHnergomodelirovanie-10-09">Энергомоделирование</a></li>
+</ol>
+<p><a href="https://t.me/DTwinDiscussion">Вопросы и предложения</a></p>
+<p><strong>Все права принадлежат</strong> <a href="www.dtwin.ru">ООО “Цифровой Двойник”</a><br />
+<strong>All rights reserved</strong> <a href="www.the-digital-twin.com">Digital twin LLC</a></p>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="soft.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
